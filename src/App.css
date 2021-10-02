@@ -72,15 +72,15 @@
 }
 .page3 {
   position: absolute;
-  width: 100% !important;
-  height: 500px;
+  /* width: 100% !important; */
+  height: 75vh;
   left: 0px;
-  bottom: -20%;
+  bottom: -25%;
   padding: 2rem;
   background: linear-gradient(
       0deg,
-      rgb(255, 255, 255, 0.5),
-      rgb(255, 255, 255, 0.5)
+      rgb(255, 255, 255, 0.6),
+      rgb(255, 255, 255, 0.6)
     ),
     url("./assets/donation.png");
   background-repeat: no-repeat;
@@ -97,7 +97,8 @@
 .page3__programs--buttons {
   display: flex;
   flex-direction: column !important;
-  justify-content: space-between;
+  justify-content: center;
+  /* align-items: flex-start; */
 }
 .MuiButton-root {
   border-radius: 0 !important;

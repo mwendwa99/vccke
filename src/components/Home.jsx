@@ -27,7 +27,7 @@ function Home() {
             <Parallax
                 bgImage={assets.home}
                 strength={500}
-                bgImageStyle={{ opacity: '0.8' }}
+                bgImageStyle={{ opacity: '0.9' }}
                 blur={{ min: 0, max: 0.5 }}
             >
                 <div style={{ height: '100vh' }}>
@@ -91,15 +91,15 @@ function Home() {
             <div className='page3' >
                 <Grid container className='page3__programs'>
                     <Grid item sm={6}>
-                        <Typography variant='h3'> VCCK Programs</Typography>
+                        <Typography variant='header3'> VCCK Programs</Typography>
                         <br />
-                        <Typography variant='text1'>
-                            On average we hold monthly fundraiser activities where we visit
+                        <Typography variant='text2'>
+                            On average we hold semi-annual fundraiser activities where we visit
                             children in various counties to support them.
                         </Typography>
                         <br />
                         <br />
-                        <Typography variant='text1'>
+                        <Typography variant='text2'>
                             Each year donors and well-wishers travel with VCCKE to provide food, clothes and support
                             to the vulnerable children accross Kenya
                         </Typography>
