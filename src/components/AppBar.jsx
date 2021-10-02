@@ -8,7 +8,7 @@ import IconButton from '@mui/material/IconButton';
 import { makeStyles } from '@mui/styles';
 import { Link } from 'react-router-dom'
 
-import assets from '../assets';
+import { assets } from '../assets';
 
 const useStyles = makeStyles((theme) => ({
     root: {

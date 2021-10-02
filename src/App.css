@@ -15,13 +15,13 @@
 }
 .header__home--component1 {
   position: absolute;
-  width: 450px;
-  height: 150px;
+  width: 600px;
+  height: 300px;
   left: 170px;
   top: 140px;
 }
 .page2 {
-  height: 100vh;
+  height: 22vh;
   background-color: #fff;
   position: relative;
 }
@@ -33,13 +33,27 @@
   background-color: red;
   position: absolute;
   width: 50%;
-  height: 30%;
+  --component-height: 100%;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  top: -15%;
+  top: -50%;
   padding: 1rem;
+}
+.page2__container {
+  height: 100%;
+  margin-top: 1rem;
+  /* position: absolute; */
+  /* top: calc(var(--component-parent-height)); */
+}
+.page2__card {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
 }
 .MuiButton-root {
   border-radius: 0 !important;
