@@ -1,9 +1,11 @@
 import React from 'react';
 import { Parallax } from 'react-parallax';
-import { Typography, Button, Paper, Container, Grid, Divider } from '@mui/material'
+import { Typography, Button, Paper, Container, Grid, Divider, Fab } from '@mui/material'
 
 import { assets, colors } from '../assets';
 import Card from './Card';
+import Footer from './Footer';
+import { AccountBalance, DinnerDining, FoodBank, Launch, SportsSoccer } from '@mui/icons-material';
 
 
 function Home() {
@@ -27,11 +29,11 @@ function Home() {
             <Parallax
                 bgImage={assets.home}
                 strength={500}
-                bgImageStyle={{ opacity: '0.9' }}
+                bgImageStyle={{ opacity: '0.8' }}
                 blur={{ min: 0, max: 0.5 }}
             >
-                <div style={{ height: '100vh' }}>
-                    <div className='header__home--component1' >
+                <div style={{ height: '85vh' }}>
+                    <div className='page1' >
                         <Typography variant='header1' sx={{ color: '#fff' }}>Children Deserve the Best</Typography>
                         <br />
                         <br />
@@ -45,9 +47,9 @@ function Home() {
                     </div>
                 </div>
             </Parallax>
-            <Container maxWidth='xl' className='page2' >
-                <Grid container  >
-                    <Paper className='header__home--component2'>
+            <Container maxWidth='md' className='page2' >
+                <Grid container className='page2__grid' >
+                    <Paper className='page2__grid--paper'>
                         <Typography variant='header1' color='primary'>Our Vision</Typography>
                         <Typography color="secondary" variant='header2'>
                             Improving Children Wellbeing and Reducing Poverty in Kenya
@@ -61,8 +63,8 @@ function Home() {
                 </Grid>
             </Container>
             <Container maxWidth='lg'  >
-                <Grid container className='page2__card--container'  >
-                    <Grid className='page2__card' item sm={12}>
+                <Grid container >
+                    <Grid className='page2__card--container' item sm={12}>
                         {
                             values.map((item, id) =>
                                 <Card key={id} pos={id} item={item} />
@@ -88,10 +90,10 @@ function Home() {
                     </Grid>
                 </Grid>
             </Container>
-            <div className='page3' >
+            <Container maxWidth='xl' className='page3' >
                 <Grid container className='page3__programs'>
                     <Grid item sm={6}>
-                        <Typography variant='header3'> VCCK Programs</Typography>
+                        <Typography variant='header1'> VCCK Programs</Typography>
                         <br />
                         <Typography variant='text2'>
                             On average we hold semi-annual fundraiser activities where we visit
@@ -101,17 +103,48 @@ function Home() {
                         <br />
                         <Typography variant='text2'>
                             Each year donors and well-wishers travel with VCCKE to provide food, clothes and support
-                            to the vulnerable children accross Kenya
+                            to the vulnerable children accross the country.
                         </Typography>
                     </Grid>
-                    <Grid item sm={6} className='page3__programs--buttons' >
-                        <Button variant='contained' size='large'>BUTTON</Button>
-                        <Button variant='contained' size='large'>BUTTON</Button>
-                        <Button variant='contained' size='large'>BUTTON</Button>
-                        <Button variant='contained' size='large'>BUTTON</Button>
+                    <Grid item sm={2.5} className='page3__programs--buttons' >
+                        <Fab sx={{ mt: 1 }} variant='extended' color="primary" aria-label="soccer">
+                            <SportsSoccer sx={{ mr: 1 }} fontSize='medium' />
+                            <Typography sx={{ mr: 'auto', textTransform: 'capitalize' }} variant='body1'>
+                                Sports Events
+                            </Typography>
+                            <Launch />
+                        </Fab>
+                        <Fab sx={{ mt: 1 }} variant='extended' color="primary" aria-label="soccer">
+                            <FoodBank sx={{ mr: 1 }} fontSize='medium' />
+                            <Typography sx={{ mr: 'auto', textTransform: 'capitalize' }} variant='body1'>
+                                Cookouts
+                            </Typography>
+                            <Launch />
+                        </Fab>
+                        <Fab sx={{ mt: 1 }} variant='extended' color="primary" aria-label="soccer">
+                            <AccountBalance sx={{ mr: 1 }} fontSize='medium' />
+                            <Typography sx={{ mr: 'auto', textTransform: 'capitalize' }} variant='body1'>
+                                Fundraisers
+                            </Typography>
+                            <Launch />
+                        </Fab>
+                        <Fab sx={{ mt: 1 }} variant='extended' color="primary" aria-label="soccer">
+                            <DinnerDining sx={{ mr: 1 }} fontSize='medium' />
+                            <Typography sx={{ mr: 'auto', textTransform: 'capitalize' }} variant='body1'>
+                                Dinners
+                            </Typography>
+                            <Launch />
+                        </Fab>
+
                     </Grid>
                 </Grid>
-
+            </Container>
+            <div className="footer">
+                <Footer />
+                <Grid container>
+                    <Grid item sm={12}>
+                    </Grid>
+                </Grid>
             </div>
 
         </div >

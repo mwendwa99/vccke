@@ -12,7 +12,7 @@ export default function ActionAreaCard({ item, pos }) {
 
     const color = Object.values(colors)[pos]
     return (
-        <Card sx={{ width: "50%", bgcolor: color, margin: '1rem' }}>
+        <Card sx={{ width: "100%", bgcolor: color, margin: '1rem' }}>
             <CardMedia
                 component="img"
                 // height="100%"

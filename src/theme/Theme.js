@@ -16,6 +16,9 @@ export const AppTheme = createTheme({
         neutral: {
             main: '#E5E5E5',
             contrastText: '#000'
+        },
+        orange: {
+            main: 'rgba(246, 162, 27)'
         }
     },
     typography: {
