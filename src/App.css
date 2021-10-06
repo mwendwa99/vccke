@@ -70,18 +70,16 @@
   justify-content: center !important;
 }
 .page3 {
-  position: absolute;
+  position: relative;
   background: linear-gradient(
       0deg,
       rgb(255, 255, 255, 0.65),
       rgb(255, 255, 255, 0.65)
     ),
     url("./assets/donation.png");
-  height: 60vh;
+  height: 70vh;
   background-repeat: no-repeat;
   background-size: auto;
-  bottom: -25%;
-  z-index: -1;
 }
 .page3__programs {
   height: 100%;
@@ -96,10 +94,13 @@
   flex-direction: column !important;
   justify-content: center;
 }
-.footer {
-  position: absolute;
-  width: 100%;
-  bottom: -32%;
+.our-work__container {
+  padding: 1rem;
+}
+.our-work__container--programs {
+  background-color: #e5e5e5;
+  height: 100%;
+  padding: 2rem;
 }
 .MuiButton-root {
   border-radius: 0 !important;
@@ -110,4 +111,17 @@
 }
 .MuiCard-root {
   border-radius: 0 !important;
+}
+.box {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  object-fit: contain;
+  /* background-image: url("https://images.pexels.com/photos/2883380/pexels-photo-2883380.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"); */
+  background-image: url("https://images.pexels.com/photos/2305192/pexels-photo-2305192.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+}
+
+.background-tint {
+  background-color: rgba(44, 172, 71, 0.7);
+  background-blend-mode: multiply;
 }

@@ -34,20 +34,22 @@ export default function ButtonAppBar() {
                         edge="start"
                         aria-label="menu"
                         sx={{ mr: 2 }}
+                        component={Link}
+                        to='/'
                     >
                         <img src={assets.logo} height={40} width={40} alt="logo" />
                     </IconButton>
                     <div className={classes.linksSection}>
-                        <Link to='/' style={{ textDecoration: 'none' }}>
+                        <Link to='/our-work' style={{ textDecoration: 'none' }}>
                             <Typography color="primary" variant="h6" >Our Work</Typography>
                         </Link>
-                        <Link to='/' style={{ textDecoration: 'none' }}>
+                        <Link to='/impact' style={{ textDecoration: 'none' }}>
                             <Typography color="primary" variant="h6" >Impact</Typography>
                         </Link>
-                        <Link to='/' style={{ textDecoration: 'none' }}>
+                        <Link to='/about' style={{ textDecoration: 'none' }}>
                             <Typography color="primary" variant="h6" >About Us</Typography>
                         </Link>
-                        <Link to='/' style={{ textDecoration: 'none' }}>
+                        <Link to='/contact' style={{ textDecoration: 'none' }}>
                             <Typography color="primary" variant="h6" >Contact</Typography>
                         </Link>
                         <Button variant='contained' disableElevation size='medium' color="primary">DONATE</Button>
