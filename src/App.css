@@ -117,8 +117,7 @@
   height: 100%;
   background-size: cover;
   object-fit: contain;
-  /* background-image: url("https://images.pexels.com/photos/2883380/pexels-photo-2883380.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"); */
-  background-image: url("https://images.pexels.com/photos/2305192/pexels-photo-2305192.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+  background-image: url("https://images.pexels.com/photos/2305192/pexels-photo-2305192.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500https://images.pexels.com/photos/3571551/pexels-photo-3571551.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
 }
 
 .background-tint {

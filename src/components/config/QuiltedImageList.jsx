@@ -1,6 +1,7 @@
 import * as React from 'react';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
+import { ImageListItemBar } from '@mui/material';
 
 function srcset(image, size, rows = 1, cols = 1) {
     return {
@@ -10,7 +11,7 @@ function srcset(image, size, rows = 1, cols = 1) {
     };
 }
 
-export default function QuiltedImageList() {
+export function QuiltedImageList() {
     return (
         <ImageList
             sx={{ width: '100%', height: '100%' }}
@@ -89,5 +90,69 @@ const itemData = [
         img: 'https://images.pexels.com/photos/9705726/pexels-photo-9705726.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
         title: 'childrens day',
         cols: 2,
+    },
+];
+// ***********************************************************************
+// ***********************************************************************
+
+export function TitlebarImageList() {
+    return (
+        <ImageList sx={{ width: '100%', height: '100%' }} cols={3} variant='quilted'>
+            {titleItemData.map((item) => (
+                <ImageListItem key={item.img}>
+                    <img
+                        src={`${item.img}?w=248&fit=crop&auto=format`}
+                        srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                        alt={item.title}
+                        loading="lazy"
+                    />
+                    <ImageListItemBar
+                        title={item.title}
+                        subtitle={item.author}
+                    // actionIcon={
+                    //     <IconButton
+                    //         sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
+                    //         aria-label={`info about ${item.title}`}
+                    //     >
+                    //         <Info />
+                    //     </IconButton>
+                    // }
+                    />
+                </ImageListItem>
+            ))}
+        </ImageList>
+    );
+}
+
+const titleItemData = [
+    {
+        img: 'https://images.pexels.com/photos/8374093/pexels-photo-8374093.jpeg',
+        title: 'Nairobi',
+        // author: '@bkristastucchio',
+        // rows: 2,
+        // cols: 2,
+        // featured: true,
+    },
+    {
+        img: 'https://images.pexels.com/photos/1085695/pexels-photo-1085695.jpeg',
+        title: 'Tharaka Nithi',
+        // author: '@helloimnik',
+    },
+    {
+        img: 'https://images.pexels.com/photos/2172499/pexels-photo-2172499.jpeg',
+        title: 'Kisumu',
+        // author: '@rollelflex_graphy726',
+    },
+    {
+        img: 'https://images.pexels.com/photos/5425893/pexels-photo-5425893.jpeg',
+        title: 'Meru',
+        // author: '@nolanissac',
+        // cols: 1,
+    },
+    {
+        img: 'https://images.pexels.com/photos/15203/pexels-photo.jpg',
+        title: 'Machakos',
+        // author: '@hjrc33',
+        // cols: 2,
     },
 ];

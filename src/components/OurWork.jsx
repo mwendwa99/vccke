@@ -3,7 +3,7 @@ import { Container, Fab, Fade, Grid, Typography } from '@mui/material'
 import React, { useState } from 'react';
 import VizSensor from 'react-visibility-sensor';
 
-import QuiltedImageList from './config/QuiltedImageList';
+import { QuiltedImageList } from './config/QuiltedImageList';
 
 const OurWork = () => {
     const [active, setActive] = useState(false);
@@ -18,7 +18,6 @@ const OurWork = () => {
                         </div>
                     </div>
                 </Container>
-                {/* <Fade in={true} timeout={2000}> */}
                 <Container maxWidth='xl' className='our-work__container' >
                     <Grid container className='' >
                         <Grid item sm={6} >
@@ -45,7 +44,6 @@ const OurWork = () => {
                         </Grid>
                     </Grid>
                 </Container>
-                {/* </Fade> */}
                 <Container maxWidth='xl' className='our-work__container--programs' >
                     <Grid gap={3} container className='page3__programs'>
                         <Grid item sm={6}>

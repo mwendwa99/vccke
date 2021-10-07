@@ -43,9 +43,9 @@ export default function ButtonAppBar() {
                         <Link to='/our-work' style={{ textDecoration: 'none' }}>
                             <Typography color="primary" variant="h6" >Our Work</Typography>
                         </Link>
-                        <Link to='/impact' style={{ textDecoration: 'none' }}>
+                        {/* <Link to='/impact' style={{ textDecoration: 'none' }}>
                             <Typography color="primary" variant="h6" >Impact</Typography>
-                        </Link>
+                        </Link> */}
                         <Link to='/about' style={{ textDecoration: 'none' }}>
                             <Typography color="primary" variant="h6" >About Us</Typography>
                         </Link>

@@ -52,5 +52,10 @@ export const AppTheme = createTheme({
             fontSize: '1.2rem',
             fontWeight: 400,
         },
+        h5: {
+            fontWeight: 500,
+            fontSize: '1.5rem',
+            lineHeight: 1.874
+        }
     }
 });

@@ -5,9 +5,17 @@ import { Typography, Button, Paper, Container, Grid, Fab, Fade } from '@mui/mate
 import { assets, colors } from '../assets';
 import Card from './Card';
 import { AccountBalance, DinnerDining, FoodBank, Launch, SportsSoccer } from '@mui/icons-material';
+import { makeStyles } from '@mui/styles';
 
+const useStyles = makeStyles(() => ({
+    mainText: {
+        color: colors.white,
+        textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
+    }
+}));
 
 function Home() {
+    const classes = useStyles();
     const values = [
         {
             name: 'Volunteer',
@@ -33,10 +41,10 @@ function Home() {
                 >
                     <div style={{ height: '85vh' }}>
                         <div className='page1' >
-                            <Typography variant='header1' sx={{ color: '#fff' }}>Children Deserve the Best</Typography>
+                            <Typography variant='header1' className={classes.mainText}>Children Deserve the Best</Typography>
                             <br />
                             <br />
-                            <Typography variant='text1' align='justify' sx={{ color: '#fff' }}>
+                            <Typography variant='text1' align='justify' className={classes.mainText}>
                                 The core mission of Vulnerable Children Concern Kenya is to work with our communities to achieve sustainable solutions to ending children poverty.
                             </Typography>
                             <br />
