@@ -100,7 +100,7 @@ function Home() {
                 <Container maxWidth='xl' className='page3' >
                     <Grid container className='page3__programs'>
                         <Grid item sm={6}>
-                            <Typography variant='header1'> VCCK Programs</Typography>
+                            <Typography variant='header1' color='secondary'> VCCK Programs</Typography>
                             <br />
                             <Typography variant='text2'>
                                 On average we hold semi-annual fundraiser activities where we visit
