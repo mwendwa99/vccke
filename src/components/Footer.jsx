@@ -70,7 +70,7 @@ export default function Footer() {
                                     <ul style={{ display: 'flex', flexDirection: 'column', textDecoration: 'none' }}>
                                         <Link className={classes.links} to='/'>Home</Link>
                                         <Link className={classes.links} to='/our-work'>Our Work</Link>
-                                        <Link className={classes.links} to='/impact'>Impact</Link>
+                                        {/* <Link className={classes.links} to='/impact'>Impact</Link> */}
                                         <Link className={classes.links} to='/about'>About Us</Link>
                                         <Link className={classes.links} to='/contact'>Contact</Link>
                                     </ul>
