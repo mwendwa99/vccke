@@ -9,7 +9,7 @@ const OurWork = () => {
     const [active, setActive] = useState(false);
 
     return (
-        <Fade in timeout={1000}>
+        <Fade in timeout={1500}>
             <div className='our-work'>
                 <Container maxWidth='xl' className='box background-tint'>
                     <div style={{ height: '30vh' }}>

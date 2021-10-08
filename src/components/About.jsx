@@ -33,7 +33,7 @@ const About = () => {
     const classes = useStyles();
 
     return (
-        <Fade in timeout={2000}>
+        <Fade in timeout={1500}>
             <Box>
                 <div maxWidth='xl' className='box background-tint'>
                     <div style={{ height: '30vh' }}>
