@@ -117,10 +117,10 @@
   height: 100%;
   background-size: cover;
   object-fit: contain;
-  background-image: url("https://images.pexels.com/photos/2305192/pexels-photo-2305192.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500https://images.pexels.com/photos/3571551/pexels-photo-3571551.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-image: url("https://images.unsplash.com/photo-1529892210582-b2ed2c1dafd3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80");
 }
 
 .background-tint {
-  background-color: rgba(44, 172, 71, 0.7);
+  background-color: rgba(44, 172, 71, 0.5);
   background-blend-mode: multiply;
 }

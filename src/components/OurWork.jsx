@@ -1,5 +1,6 @@
 import { AccountBalance, DinnerDining, FoodBank, Launch, SportsSoccer } from '@mui/icons-material'
 import { Container, Fab, Fade, Grid, Typography } from '@mui/material'
+import { Box } from '@mui/system';
 import React, { useState } from 'react';
 import VizSensor from 'react-visibility-sensor';
 
@@ -9,15 +10,15 @@ const OurWork = () => {
     const [active, setActive] = useState(false);
 
     return (
-        <Fade in timeout={1500}>
-            <div className='our-work'>
-                <Container maxWidth='xl' className='box background-tint'>
+        <Fade in timeout={1000}>
+            <Box>
+                <div maxWidth='xl' className='box background-tint'>
                     <div style={{ height: '30vh' }}>
                         <div className='page1' >
                             <Typography variant='header1' sx={{ color: '#fff' }}>VCCK's Work</Typography>
                         </div>
                     </div>
-                </Container>
+                </div>
                 <Container maxWidth='xl' className='our-work__container' >
                     <Grid container className='' >
                         <Grid item sm={6} >
@@ -98,7 +99,7 @@ const OurWork = () => {
                         </Container>
                     </Fade>
                 </VizSensor>
-            </div>
+            </Box>
         </Fade>
     )
 }

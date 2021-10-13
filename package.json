@@ -12,6 +12,12 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "classnames": "^2.3.1",
+    "concurrently": "^6.3.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "nodemailer": "^6.7.0",
+    "nodemon": "^2.0.13",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-parallax": "^3.3.0",
@@ -21,10 +27,11 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "node Server.js",
+    "server": "nodemon",
+    "client": "react-scripts start",
+    "dev": "concurrently \"yarn run server\" \"yarn run client\"",
+    "build": "yarn build"
   },
   "eslintConfig": {
     "extends": [

@@ -32,7 +32,7 @@ function Home() {
     ]
 
     return (
-        <Fade in timeout={1500}>
+        <Fade in timeout={1000}>
             <div className='Home' >
                 <Parallax
                     bgImage={assets.home}

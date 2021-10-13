@@ -33,9 +33,9 @@ const About = () => {
     const classes = useStyles();
 
     return (
-        <Fade in timeout={1500}>
+        <Fade in timeout={1000}>
             <Box>
-                <div maxWidth='xl' className='box background-tint'>
+                <div className='box background-tint'>
                     <div style={{ height: '30vh' }}>
                         <div className='page1' >
                             <Typography variant='header1' sx={{ color: '#fff' }}>About VCCK</Typography>
