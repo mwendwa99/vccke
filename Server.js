@@ -43,7 +43,7 @@ router.post('/contact', (req, res) => {
     const message = req.body.message;
     const from = name && email ? `${name} <${email}>` : `${name || email}`
     const mail = {
-        from,
+        from: from,
         to: process.env.client,
         subject: "VCCKE form submission",
         html: `

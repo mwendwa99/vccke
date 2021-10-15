@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'center',
     },
     gridContainer: {
-        boxShadow: '0px 3px 3px rgba(0, 0, 0, 0.6)',
+        boxShadow: '0px 6px 6px rgba(0, 0, 0, 0.25)',
         backgroundColor: colors.green,
         padding: theme.spacing(3),
         display: 'flex',

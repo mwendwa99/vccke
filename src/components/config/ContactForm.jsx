@@ -1,6 +1,24 @@
 import React, { useState } from "react";
+import { makeStyles } from '@mui/styles';
+import { Box } from '@mui/system';
+import { Container, Grid, Typography, TextField, Button } from '@mui/material';
 
+import { colors } from './colors';
+
+const useStyles = makeStyles((theme) => ({
+    root: {
+        backgroundColor: colors.white,
+        boxShadow: ' 0px 3.41111px 3.41111px rgba(0, 0, 0, 0.25)',
+    },
+    gridContainer: {
+        padding: theme.spacing(2),
+    },
+    gridItem: {
+        padding: theme.spacing(2),
+    }
+}))
 const ContactForm = () => {
+    const classes = useStyles()
     const [status, setStatus] = useState("Submit");
     const [info, setInfo] = useState();
 
@@ -22,26 +40,48 @@ const ContactForm = () => {
         });
         setStatus("Submit");
         let result = await response.json();
-        // alert(result.status);
         setInfo(result.status)
     };
     return (
-        <form onSubmit={handleSubmit}>
-            <h1> {info} </h1>
-            <div>
-                <label htmlFor="name">Name:</label>
-                <input type="text" id="name" required />
-            </div>
-            <div>
-                <label htmlFor="email">Email:</label>
-                <input type="email" id="email" required />
-            </div>
-            <div>
-                <label htmlFor="message">Message:</label>
-                <textarea id="message" required />
-            </div>
-            <button type="submit">{status}</button>
-        </form>
+        <Box>
+            <Container maxWidth='md'>
+                <form className={classes.root} onSubmit={handleSubmit}>
+                    <Typography variant='h5' color='secondary'> {info} </Typography>
+                    <Grid container className={classes.gridContainer}>
+                        <Grid item sm={12} className={classes.gridItem}>
+                            <TextField
+                                required={true}
+                                color='primary'
+                                helperText="Please enter your name"
+                                id="name" label="name" fullWidth variant="outlined" />
+                        </Grid>
+                        <Grid item sm={12} className={classes.gridItem}>
+                            <TextField
+                                required={true}
+                                color='primary'
+                                helperText="Please enter your email"
+                                fullWidth id="email" label="email" variant="outlined" />
+                        </Grid>
+                        <Grid item sm={12} className={classes.gridItem}>
+                            <TextField
+                                required={true}
+                                color='primary'
+                                fullWidth
+                                id="message"
+                                label="Message"
+                                multiline
+                                rows={4}
+                                defaultValue="Enter message here..."
+                                variant="filled"
+                            />
+                        </Grid>
+                        <Grid item sm={12}>
+                            <Button variant='contained' size='large' color='primary' type="submit">{status}</Button>
+                        </Grid>
+                    </Grid>
+                </form>
+            </Container>
+        </Box>
     );
 };
 

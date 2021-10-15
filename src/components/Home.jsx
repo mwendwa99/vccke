@@ -6,11 +6,15 @@ import { assets, colors } from '../assets';
 import Card from './Card';
 import { AccountBalance, DinnerDining, FoodBank, Launch, SportsSoccer } from '@mui/icons-material';
 import { makeStyles } from '@mui/styles';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles(() => ({
     mainText: {
         color: colors.white,
         textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
+    },
+    links: {
+        textDecoration: 'none',
     }
 }));
 
@@ -50,7 +54,9 @@ function Home() {
                             <br />
                             <br />
                             <Button size='large' variant='contained' sx={{ mr: 10 }} color='secondary'>Take Action</Button>
-                            <Button size='large' variant='contained' color='neutral' >Contact Us</Button>
+                            <Button size='large' variant='contained' color='neutral' >
+                                <Link className={classes.links} to='/contact'>Contact Us</Link>
+                            </Button>
                         </div>
                     </div>
                 </Parallax>

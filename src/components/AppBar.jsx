@@ -9,6 +9,7 @@ import { makeStyles } from '@mui/styles';
 import { Link } from 'react-router-dom'
 
 import { assets } from '../assets';
+import { Tooltip } from '@mui/material';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -52,7 +53,11 @@ export default function ButtonAppBar() {
                         <Link to='/contact' style={{ textDecoration: 'none' }}>
                             <Typography color="primary" variant="h6" >Contact</Typography>
                         </Link>
-                        <Button variant='contained' disableElevation size='medium' color="primary">DONATE</Button>
+                        <Tooltip title="coming soon!" placement='bottom'>
+                            <Button variant='contained' disableElevation size='medium' color="primary">
+                                DONATE
+                            </Button>
+                        </Tooltip>
                     </div>
                 </Toolbar>
             </AppBar>

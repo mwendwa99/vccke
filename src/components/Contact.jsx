@@ -1,4 +1,4 @@
-import { Fade, Typography, Container } from '@mui/material'
+import { Fade, Typography, Container, Grid } from '@mui/material'
 import { Box } from '@mui/system';
 import { makeStyles } from '@mui/styles';
 import React from 'react';
@@ -18,19 +18,29 @@ const Contact = () => {
 
     return (
         <Fade in timeout={1000}>
-            <Box>
-                <div maxWidth='xl' className='box background-tint'>
-                    <div style={{ height: '30vh' }}>
-                        <div className='page1' >
-                            <Typography variant='header1' sx={{ color: '#fff' }}>Contact Us</Typography>
-                        </div>
-                    </div>
-                </div>
+            <Box className='box background-tint contact-page'>
+                <Grid container style={{ height: '30vh' }}>
+                    <Grid item className='page1' >
+                        <Typography variant='header1' sx={{ color: '#fff' }}>Contact Us</Typography>
+                    </Grid>
+                </Grid>
                 <Container maxWidth='xl' className={classes.root}>
-                    <Typography variant='header1' color='primary'>
-                        We would love to hear from you!
-                    </Typography>
-                    <ContactForm />
+                    <Grid container>
+                        <Grid item sm={12}>
+                            <Typography variant='header1' color='primary'>
+                                We would love to hear from you!
+                            </Typography>
+                            <br />
+                            <Typography variant='text2'>
+                                Thank you for contacting VCCK Someone from our team will respond to your inquiry within 3 business days.
+                                <br />
+                                If this is urgent, please contact us directly at  +254-722-894-325.
+                            </Typography>
+                        </Grid>
+                        <Grid sx={{ padding: 5 }} item sm={12}>
+                            <ContactForm />
+                        </Grid>
+                    </Grid>
                 </Container>
             </Box>
         </Fade>
