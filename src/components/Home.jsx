@@ -1,9 +1,9 @@
 import React from 'react';
 import { Parallax } from 'react-parallax';
-import { Typography, Button, Paper, Container, Grid, Fab, Fade } from '@mui/material'
+import { Typography, Button, Tooltip, Paper, Container, Grid, Fab, Fade } from '@mui/material'
 
 import { assets, colors } from '../assets';
-import Card from './Card';
+import ActionAreaCard from './config/ActionAreaCard';
 import { AccountBalance, DinnerDining, FoodBank, Launch, SportsSoccer } from '@mui/icons-material';
 import { makeStyles } from '@mui/styles';
 import { Link } from 'react-router-dom';
@@ -53,7 +53,11 @@ function Home() {
                             </Typography>
                             <br />
                             <br />
-                            <Button size='large' variant='contained' sx={{ mr: 10 }} color='secondary'>Take Action</Button>
+                            <Tooltip title='Coming soon!'>
+                                <Button size='large' variant='contained' sx={{ mr: 10 }} color='secondary'>
+                                    Take Action
+                                </Button>
+                            </Tooltip>
                             <Button size='large' variant='contained' color='neutral' >
                                 <Link className={classes.links} to='/contact'>Contact Us</Link>
                             </Button>
@@ -80,7 +84,7 @@ function Home() {
                         <Grid className='page2__card--container' item sm={12}>
                             {
                                 values.map((item, id) =>
-                                    <Card key={id} pos={id} item={item} />
+                                    <ActionAreaCard key={id} pos={id} item={item} />
                                 )
                             }
                         </Grid>
@@ -152,7 +156,7 @@ function Home() {
                     </Grid>
                 </Container>
             </div >
-        </Fade>
+        </Fade >
     )
 }
 

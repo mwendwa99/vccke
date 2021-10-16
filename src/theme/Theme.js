@@ -30,7 +30,7 @@ export const AppTheme = createTheme({
         header1: {
             fontWeight: 700,
             fontSize: '3rem',
-            lineHeight: 1.874
+            lineHeight: 1.5
         },
         header2: {
             fontSize: '1.5rem',
@@ -47,6 +47,10 @@ export const AppTheme = createTheme({
         text2: {
             fontSize: '1.5rem',
             fontWeight: 400,
+        },
+        text3: {
+            fontSize: '1.5rem',
+            fontWeight: 350,
         },
         body1: {
             fontSize: '1.2rem',

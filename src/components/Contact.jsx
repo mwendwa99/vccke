@@ -18,7 +18,7 @@ const Contact = () => {
 
     return (
         <Fade in timeout={1000}>
-            <Box className='box background-tint contact-page'>
+            <Box className='box background-tint'>
                 <Grid container style={{ height: '30vh' }}>
                     <Grid item className='page1' >
                         <Typography variant='header1' sx={{ color: '#fff' }}>Contact Us</Typography>
