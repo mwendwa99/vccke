@@ -4,12 +4,11 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
 import { makeStyles } from '@mui/styles';
 import { Link } from 'react-router-dom'
 
 import { assets } from '../assets';
-import { Tooltip } from '@mui/material';
+import { Fab, Tooltip } from '@mui/material';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -30,7 +29,7 @@ export default function ButtonAppBar() {
         <Box sx={{ flexGrow: 1 }}>
             <AppBar position="static">
                 <Toolbar className={classes.root} >
-                    <IconButton
+                    <Fab
                         size="large"
                         edge="start"
                         aria-label="menu"
@@ -38,15 +37,14 @@ export default function ButtonAppBar() {
                         component={Link}
                         to='/'
                     >
-                        <img src={assets.logo} height={40} width={40} alt="logo" />
-                    </IconButton>
+                        <Tooltip title='HOME'>
+                            <img src={assets.logo} height='100%' width='100%' alt="logo" />
+                        </Tooltip>
+                    </Fab>
                     <div className={classes.linksSection}>
                         <Link to='/our-work' style={{ textDecoration: 'none' }}>
                             <Typography color="primary" variant="h6" >Our Work</Typography>
                         </Link>
-                        {/* <Link to='/impact' style={{ textDecoration: 'none' }}>
-                            <Typography color="primary" variant="h6" >Impact</Typography>
-                        </Link> */}
                         <Link to='/about' style={{ textDecoration: 'none' }}>
                             <Typography color="primary" variant="h6" >About Us</Typography>
                         </Link>
