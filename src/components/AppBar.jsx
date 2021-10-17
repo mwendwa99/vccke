@@ -31,9 +31,10 @@ export default function ButtonAppBar() {
                 <Toolbar className={classes.root} >
                     <Fab
                         size="large"
+                        disableFocusRipple
                         edge="start"
                         aria-label="menu"
-                        sx={{ mr: 2 }}
+                        sx={{ mr: 2, boxShadow: 'none' }}
                         component={Link}
                         to='/'
                     >

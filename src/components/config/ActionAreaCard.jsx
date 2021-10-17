@@ -8,7 +8,7 @@ import { OpenInNew } from '@mui/icons-material';
 import { makeStyles } from '@mui/styles';
 import { Link } from 'react-router-dom';
 
-import { colors } from '../../assets';
+import { colors } from './colors';
 
 const useStyles = makeStyles(() => ({
     links: {

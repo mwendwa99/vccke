@@ -8,11 +8,3 @@ export const assets = {
     Package: 'https://images.pexels.com/photos/4506270/pexels-photo-4506270.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
     Warehouse: 'https://images.pexels.com/photos/236705/pexels-photo-236705.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
 }
-
-export const colors = {
-    primary: '#2CAC47',
-    secondary: '#ED018A',
-    orange: '#E48625',
-    white: '#fff',
-    black: '#000'
-}

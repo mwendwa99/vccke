@@ -1,12 +1,13 @@
 import React from 'react';
 import { Parallax } from 'react-parallax';
 import { Typography, Button, Tooltip, Paper, Container, Grid, Fab, Fade } from '@mui/material'
-
-import { assets, colors } from '../assets';
-import ActionAreaCard from './config/ActionAreaCard';
 import { AccountBalance, DinnerDining, FoodBank, Launch, SportsSoccer } from '@mui/icons-material';
 import { makeStyles } from '@mui/styles';
 import { Link } from 'react-router-dom';
+
+import { assets } from '../assets';
+import { colors } from './config/colors';
+import ActionAreaCard from './config/ActionAreaCard';
 
 const useStyles = makeStyles(() => ({
     mainText: {
