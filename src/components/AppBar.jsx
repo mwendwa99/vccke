@@ -53,9 +53,11 @@ export default function ButtonAppBar() {
                             <Typography color="primary" variant="h6" >Contact</Typography>
                         </Link>
                         <Tooltip title="coming soon!" placement='bottom'>
-                            <Button variant='contained' disableElevation size='medium' color="primary">
-                                DONATE
-                            </Button>
+                            <Link to='/donate' style={{ textDecoration: 'none' }}>
+                                <Button variant='contained' disableElevation size='medium' color="primary">
+                                    DONATE
+                                </Button>
+                            </Link>
                         </Tooltip>
                     </div>
                 </Toolbar>

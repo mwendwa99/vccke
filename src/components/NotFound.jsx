@@ -3,16 +3,19 @@ import { Container, Fade, Grid, Typography } from '@mui/material'
 import { Box } from '@mui/system';
 import { Link } from 'react-router-dom';
 import { makeStyles } from '@mui/styles';
+
 import { colors } from './config/colors';
+import { assets } from '../assets';
 
 const useStyle = makeStyles((theme) => ({
     root: {
         padding: theme.spacing(2),
-        height: '100%'
     },
     gridContainer: {
+        height: '20rem',
+        padding: theme.spacing(3),
         backgroundColor: colors.grey,
-        padding: theme.spacing(3)
+        backgroundImage: assets.alternatingArrowHead,
     }
 }))
 
