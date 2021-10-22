@@ -13,6 +13,7 @@ import { AppTheme } from './theme/Theme';
 import Footer from './components/Footer';
 import ScrollToTop from './components/config/ScrollToTop';
 import Volunteer from './components/Volunteer';
+import Support from './components/Support';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
               <Route path='/contact' component={Contact} />
               <Route path='/donate' component={Donate} />
               <Route path='/volunteer' component={Volunteer} />
+              <Route path='/request support' component={Support} />
             </Switch>
             <Footer />
           </ScrollToTop>

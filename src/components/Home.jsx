@@ -31,7 +31,7 @@ function Home() {
             image: assets.Donate
         },
         {
-            name: 'Support',
+            name: 'Request Support',
             image: assets.Support
         }
     ]

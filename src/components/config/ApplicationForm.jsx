@@ -4,6 +4,8 @@ import { Box } from '@mui/system';
 import { Container, Grid, Typography, TextField, Button } from '@mui/material';
 
 import { colors } from './colors';
+import PhoneInput from "react-phone-number-input";
+import RadioButtonsGroup from "./RadioButtonGroup";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -17,21 +19,30 @@ const useStyles = makeStyles((theme) => ({
         padding: theme.spacing(2),
     }
 }))
-const ContactForm = ({ nameLabel, emailLabel, messageLabel }) => {
+const ApplicationForm = ({ nameLabel, emailLabel, phoneLabel, messageLabel }) => {
     const classes = useStyles()
     const [status, setStatus] = useState("Submit");
+    const [description, setDescription] = useState();
     const [info, setInfo] = useState();
+
+    // pick values from radio button group
+    const radioValues = async (data) => {
+        setDescription(data);
+    }
+    console.log(description)
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         setStatus("Sending...");
-        const { name, email, message } = e.target.elements;
+        const { name, email, number, message } = e.target.elements;
         let details = {
             name: name.value,
             email: email.value,
+            number: number.value,
+            description: description,
             message: message.value,
         };
-        let response = await fetch("http://localhost:5000/contact", {
+        let response = await fetch("http://localhost:5000/application", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json;charset=utf-8",
@@ -66,12 +77,22 @@ const ContactForm = ({ nameLabel, emailLabel, messageLabel }) => {
                             <TextField
                                 required={true}
                                 color='primary'
+                                helperText={`Please enter your phone ${phoneLabel}`}
+                                fullWidth id={phoneLabel} label={phoneLabel} variant="outlined" />
+                        </Grid>
+                        <Grid item sm={12} className={classes.gridItem}>
+                            <RadioButtonsGroup radioValues={radioValues} />
+                        </Grid>
+                        <Grid item sm={12} className={classes.gridItem}>
+                            <TextField
+                                required={true}
+                                color='primary'
                                 fullWidth
                                 id={messageLabel}
                                 label={messageLabel}
                                 multiline
                                 rows={4}
-                                defaultValue={`Enter ${messageLabel} here...`}
+                                defaultValue={`Enter request ${messageLabel} here...`}
                                 variant="filled"
                             />
                         </Grid>
@@ -85,4 +106,4 @@ const ContactForm = ({ nameLabel, emailLabel, messageLabel }) => {
     );
 };
 
-export default ContactForm;
+export default ApplicationForm;

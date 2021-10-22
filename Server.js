@@ -36,7 +36,7 @@ contactEmail.verify((error) => {
     }
 });
 
-// routes
+// customer support route
 router.post('/contact', (req, res) => {
     const name = req.body.name;
     const email = req.body.email;
@@ -57,6 +57,36 @@ router.post('/contact', (req, res) => {
             res.json({ status: 'Something went wrong. Try again later' })
         } else {
             res.json({ status: 'Thanks for contacting us. We will get back to you shortly' })
+        }
+
+    });
+});
+
+// application form route
+router.post('/application', (req, res) => {
+    const name = req.body.name;
+    const email = req.body.email;
+    const number = req.body.number;
+    const description = req.body.description;
+    const message = req.body.message;
+    const from = name && email ? `${name} <${email}>` : `${name || email}`
+    const mail = {
+        from: from,
+        to: process.env.client,
+        subject: "VCCKE form submission",
+        html: `
+        <p>Name: ${name} </p>
+        <p>Email: ${email} </p>
+        <p>Phone: ${number} </p>
+        <p>Description: ${description} </p>
+        <p>Message: ${message} </p>`,
+        replyTo: from,
+    };
+    contactEmail.sendMail(mail, (error) => {
+        if (error) {
+            res.json({ status: 'Something went wrong. Try again later' })
+        } else {
+            res.json({ status: 'Thank you for sending your application us. We will get back to you shortly' })
         }
 
     });
