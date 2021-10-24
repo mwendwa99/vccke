@@ -3,6 +3,7 @@ import { Container, Fab, Fade, Grid, Typography } from '@mui/material'
 import { Box } from '@mui/system';
 import React, { useState } from 'react';
 import VizSensor from 'react-visibility-sensor';
+import { Link } from 'react-router-dom';
 
 import { QuiltedImageList } from './config/QuiltedImageList';
 
@@ -61,28 +62,28 @@ const OurWork = () => {
                             </Typography>
                         </Grid>
                         <Grid item sm={3} className='page3__programs--buttons' >
-                            <Fab sx={{ mt: 1 }} variant='extended' color="primary" aria-label="soccer">
+                            <Fab component={Link} to='/coming-soon' sx={{ mt: 1 }} variant='extended' color="primary" aria-label="soccer">
                                 <SportsSoccer sx={{ mr: 1 }} fontSize='medium' />
                                 <Typography sx={{ mr: 'auto', textTransform: 'capitalize' }} variant='body1'>
                                     Sports Events
                                 </Typography>
                                 <Launch />
                             </Fab>
-                            <Fab sx={{ mt: 1 }} variant='extended' color="primary" aria-label="soccer">
+                            <Fab component={Link} to='/coming-soon' sx={{ mt: 1 }} variant='extended' color="primary" aria-label="soccer">
                                 <FoodBank sx={{ mr: 1 }} fontSize='medium' />
                                 <Typography sx={{ mr: 'auto', textTransform: 'capitalize' }} variant='body1'>
                                     Cookouts
                                 </Typography>
                                 <Launch />
                             </Fab>
-                            <Fab sx={{ mt: 1 }} variant='extended' color="primary" aria-label="soccer">
+                            <Fab component={Link} to='/coming-soon' sx={{ mt: 1 }} variant='extended' color="primary" aria-label="soccer">
                                 <AccountBalance sx={{ mr: 1 }} fontSize='medium' />
                                 <Typography sx={{ mr: 'auto', textTransform: 'capitalize' }} variant='body1'>
                                     Fundraisers
                                 </Typography>
                                 <Launch />
                             </Fab>
-                            <Fab sx={{ mt: 1 }} variant='extended' color="primary" aria-label="soccer">
+                            <Fab component={Link} to='/coming-soon' sx={{ mt: 1 }} variant='extended' color="primary" aria-label="soccer">
                                 <DinnerDining sx={{ mr: 1 }} fontSize='medium' />
                                 <Typography sx={{ mr: 'auto', textTransform: 'capitalize' }} variant='body1'>
                                     Dinners

@@ -14,6 +14,7 @@ import Footer from './components/Footer';
 import ScrollToTop from './components/config/ScrollToTop';
 import Volunteer from './components/Volunteer';
 import Support from './components/Support';
+import NotFound from './components/NotFound';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
               <Route path='/donate' component={Donate} />
               <Route path='/volunteer' component={Volunteer} />
               <Route path='/request support' component={Support} />
+              <Route path='/coming-soon' component={NotFound} />
             </Switch>
             <Footer />
           </ScrollToTop>

@@ -11,10 +11,10 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
+        boxShadow: '0px 6px 6px rgba(0, 0, 0, 0.25)',
+        backgroundColor: colors.primary,
     },
     gridContainer: {
-        boxShadow: '0px 6px 6px rgba(0, 0, 0, 0.25)',
-        backgroundColor: colors.green,
         padding: theme.spacing(3),
         display: 'flex',
         flexDirection: 'column',
