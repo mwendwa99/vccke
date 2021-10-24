@@ -1,6 +1,6 @@
 export const assets = {
     logo: require('./logo.png').default,
-    home: `https://lh3.googleusercontent.com/4G8zcuLWy4gpo4X-RcSDWYrBspjMLBCSEsz9BaXmrIbw_4gqMUdZGQ5XHYv_5QEZnrFcrx6ZEkYkBzhRpeoUxfQQ9iwM_RvflxqXd4yejJPIVuXI3mdV6kRJtbathTJOw1Uwl12Zmy3RfL-S1ntP1wo7x8Itc9Jauyx2mZ8p-SZtupXjF0emyNkf9ZHcG8CHDHz13EW2nakg0_Pmgtz-3VtOs1z5hY6rA_t0QckagUVqMLBMBOwH6kxtw6iUdf4-3ICXNs2iHOvK2xot7_zcEaDd2Y1CUXJvJ3bubnKHoiw3SgbLuaFg9wGTQUYToTdQGmq9Z-q5pETlIMIswSxeIQbLKFSNBrZQOTC6MP5GXnxGsprNbjDJMSbYwGNd62JSbEuDpU-cLTbFQk6-4WRSMHKgQmPI5m04moPhnqoYMQpUmMZirWBvswLsgobWx3ThMrAkWjK4oKXNbKK90662buUUx3hJWbkgZftl_xGijAqMEupBdle8QOfwZUXkBCYfdbInrJ6ACspTSXVHr_LVXD9uskSYSxYyPxWpoJYZJqYGS-L141a_aW5mm2d2663IznjBFGJ3355tOdIiS-hlbsqQ-geWcTEgjqBn6akkBETChd-YVHOqMgG6ariSP0ZaHiG5S13Bgu50j_oMKeM1qEDjvIITqCV4IoclYdl-sJ51iT0JzxYtFDt4F9F52ZO2kRxTKlI2PkOpAcxv7KakKKo=w994-h661-no?authuser=2`,
+    home: require('./home.jpg').default,
     Volunteer: require('./volunteer.png').default,
     Support: require('./support.png').default,
     Donate: require('./donate.png').default,

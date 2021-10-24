@@ -37,10 +37,18 @@ const useStyles = makeStyles((theme) => ({
     },
     teamGridItem: {
         display: 'flex',
-        flexDirection: 'row',
+        flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        padding: theme.spacing(3)
+        padding: theme.spacing(3),
+        [theme.breakpoints.down('sm')]: {
+            flexDirection: 'column',
+            '& img': {
+                height: '100%',
+                width: '100%'
+            }
+
+        }
     }
 }));
 const About = () => {
@@ -145,8 +153,8 @@ const About = () => {
                     </Typography>
                     <Grid container className={classes.teamGridContainer}>
                         <Grid item sm={12} className={classes.teamGridItem}>
-                            <img src={assets.team} alt="our team" />
-                            <Typography variant='body1'>
+                            <Typography variant='body1' align='center'>
+                                <img src={assets.team} height='100%' width='100%' alt="our team" />
                                 From left: Ms. Rosalia Makau, Ms. Nancy Wanja, Ms. Winnie Munene, Dr. Rittah Njeru, Dr. Fredrcik Kamunde.
                             </Typography>
                         </Grid>

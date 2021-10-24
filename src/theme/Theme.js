@@ -8,17 +8,22 @@ export const AppTheme = createTheme({
         },
         secondary: {
             main: '#ED018A',
-            contrastText: '#fff'
+            contrastText: '#000'
         },
         header: {
-            main: '#fff'
+            main: '#000'
         },
         neutral: {
             main: '#E5E5E5',
             contrastText: '#000'
         },
         orange: {
-            main: 'rgba(246, 162, 27)'
+            main: 'rgba(246, 162, 27)',
+            contrastText: '#000'
+        },
+        yellow: {
+            main: '#FECB08',
+            contrastText: '#000'
         }
     },
     typography: {

@@ -15,6 +15,7 @@ import ScrollToTop from './components/config/ScrollToTop';
 import Volunteer from './components/Volunteer';
 import Support from './components/Support';
 import NotFound from './components/NotFound';
+import Header from './components/Header';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <BrowserRouter>
           <ScrollToTop>
             <AppBar />
+            {/* <Header /> */}
             <Switch>
               <Route path='/' exact component={Home} />
               <Route path='/impact' component={Impact} />
