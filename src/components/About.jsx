@@ -2,6 +2,7 @@ import { Container, Fade, Grid, Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import { Box } from '@mui/system'
 import React from 'react';
+import { assets } from '../assets';
 
 import { colors } from './config/colors';
 import { TitlebarImageList } from './config/QuiltedImageList';
@@ -28,6 +29,19 @@ const useStyles = makeStyles((theme) => ({
     locationContainer: {
         padding: theme.spacing(3)
     },
+    teamContainer: {
+        backgroundColor: colors.grey
+    },
+    teamGridContainer: {
+        padding: theme.spacing(3)
+    },
+    teamGridItem: {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: theme.spacing(3)
+    }
 }));
 const About = () => {
     const classes = useStyles();
@@ -38,14 +52,14 @@ const About = () => {
                 <div className='box background-tint'>
                     <div style={{ height: '30vh' }}>
                         <div className='page1' >
-                            <Typography variant='header1' sx={{ color: '#fff' }}>About VCCK</Typography>
+                            <Typography variant='h1' sx={{ color: '#fff' }}>About VCCK</Typography>
                         </div>
                     </div>
                 </div>
                 <Container>
-                    <Typography variant="header1" color='primary' >Why VCCKE?</Typography>
+                    <Typography variant="h1" color='primary' >Why VCCKE?</Typography>
                     <br />
-                    <Typography variant="h5" align='justify' >
+                    <Typography variant="body1" align='justify' >
                         Vulnerable Children Concern Kenya (VCCK) is a national non-governmental Organization registered
                         in Kenya and is working five counties: Tharaka Nithi, Meru, Machakos, Nairobi and Kisumu.
                         The organization started its first activities early in 2018 and got registered as an NGO in 2020.
@@ -71,40 +85,40 @@ const About = () => {
                 </Container>
                 <Container className={classes.missionContainer} maxWidth='xl'>
                     <Grid className={classes.gridContainer} container>
-                        <Typography variant='h3' align='center'>
+                        <Typography variant='h1' align='center'>
                             <strong>The VCCK Mission</strong>
                         </Typography>
                         <br />
                         <br />
-                        <Typography variant='h4' align='center'>
+                        <Typography variant='h2' align='center'>
                             The <strong>core mission</strong> of VCCK is to work with our communities to achieve sustainable solutions to
                             ending children poverty.
                         </Typography>
                     </Grid>
                     <Grid container className={classes.gridContainer} >
                         <Grid item sm={3} className={classes.gridItem}>
-                            <Typography align='center' variant='h4'>
+                            <Typography align='center' variant='h2'>
                                 <strong>Quality Service</strong>
                             </Typography>
-                            <Typography align='center' variant='h5'>
+                            <Typography align='center' variant='body1'>
                                 We shall do everything we can to address the needs of each other, our donors, our partners,
                                 and the sick and dying all over the world.
                             </Typography>
                         </Grid>
                         <Grid item sm={3} className={classes.gridItem}>
-                            <Typography align='center' variant='h4'>
+                            <Typography align='center' variant='h2'>
                                 <strong>Accountability</strong>
                             </Typography>
-                            <Typography align='center' variant='h5'>
+                            <Typography align='center' variant='body1'>
                                 We will tell it as it is. We will not make promises we can not keep, and we will stick
                                 to the ones we have already made.
                             </Typography>
                         </Grid>
                         <Grid item sm={3} className={classes.gridItem}>
-                            <Typography align='center' variant='h4'>
+                            <Typography align='center' variant='h2'>
                                 <strong>Competence</strong>
                             </Typography>
-                            <Typography align='center' variant='h5'>
+                            <Typography align='center' variant='body1'>
                                 In our field of expertise, we shall become specialists by acquiring a growing amount of knowledge
                                 and expertise in order to make our vision a reality.
                             </Typography>
@@ -112,10 +126,10 @@ const About = () => {
                     </Grid>
                 </Container>
                 <Container className={classes.locationContainer} maxWidth='lg'>
-                    <Typography variant='h4' color='primary' align='center'>
+                    <Typography variant='h2' color='primary' align='center'>
                         <strong>Administration and Operation centers</strong>
                     </Typography>
-                    <Typography variant='h5' align='center' style={{ margin: '1rem' }}>
+                    <Typography variant='body1' align='center' style={{ margin: '1rem' }}>
                         VCCK has its headquarters situated at Zimmerman Nairobi as well as five other locations across the
                         country which include distribution centers where we accept donations of supplies, clothes and food.
                         Currently, we are in the process of setting up offices in each of these locations, however, we have set
@@ -124,6 +138,19 @@ const About = () => {
                     <div style={{ margin: '1rem' }}>
                         <TitlebarImageList />
                     </div>
+                </Container>
+                <Container maxWidth='xxl' className={classes.teamContainer}>
+                    <Typography variant='h1' color='primary' align='center'>
+                        The VCCK Team
+                    </Typography>
+                    <Grid container className={classes.teamGridContainer}>
+                        <Grid item sm={12} className={classes.teamGridItem}>
+                            <img src={assets.team} alt="our team" />
+                            <Typography variant='body1'>
+                                From left: Ms. Rosalia Makau, Ms. Nancy Wanja, Ms. Winnie Munene, Dr. Rittah Njeru, Dr. Fredrcik Kamunde.
+                            </Typography>
+                        </Grid>
+                    </Grid>
                 </Container>
             </Box>
         </Fade>

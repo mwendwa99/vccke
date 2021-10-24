@@ -20,7 +20,7 @@ const Donate = () => {
             <div className='box background-tint'>
                 <div className={classes.root}>
                     <div className='page1' >
-                        <Typography variant='header1' sx={{ color: colors.white }}>Donation Programme</Typography>
+                        <Typography variant='h1' sx={{ color: colors.white }}>Donation Programme</Typography>
                     </div>
                 </div>
             </div>

@@ -21,17 +21,17 @@ const Support = () => {
             <Box className='box background-tint'>
                 <Grid container style={{ height: '30vh' }}>
                     <Grid item className='page1' >
-                        <Typography variant='header1' sx={{ color: '#fff' }}>Request Support</Typography>
+                        <Typography variant='h1' sx={{ color: '#fff' }}>Request Support</Typography>
                     </Grid>
                 </Grid>
                 <Container maxWidth='xl' className={classes.root}>
                     <Grid container>
                         <Grid item sm={12}>
-                            <Typography variant='header1' color='primary'>
+                            <Typography variant='h1' color='primary'>
                                 Request Support from Us
                             </Typography>
                             <br />
-                            <Typography variant='text2'>
+                            <Typography variant='body1'>
                                 If this is urgent, please contact us directly at  +254-722-894-325.
                             </Typography>
                         </Grid>

@@ -8,6 +8,8 @@ import { assets } from "../assets";
 const useStyles = makeStyles((theme) => ({
     root: {
         padding: theme.spacing(1),
+        height: '100%',
+        flex: 1
     },
     links: {
         textDecoration: 'none',
@@ -21,6 +23,8 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-around',
+        height: '100%',
+        flex: 1
     },
     socials: {
         display: 'flex',
@@ -34,7 +38,7 @@ export default function Footer() {
     const classes = useStyles();
 
     return (
-        <Box sx={{ flexGrow: 1 }}>
+        <Box sx={{ flexGrow: 1, height: '100%' }}>
             <AppBar className={classes.root} position="static" color='orange'>
                 <Container maxWidth="xl">
                     <Toolbar >
@@ -50,12 +54,12 @@ export default function Footer() {
                                 >
                                     <img src={assets.logo} height={100} width={100} alt="logo" />
                                 </IconButton>
-                                <Typography variant="text2" color="inherit">
+                                <Typography variant="body1" color="inherit">
                                     © 2021 vcck
                                 </Typography>
                             </Grid>
                             <Grid item sm={4}>
-                                <Typography variant="text2">
+                                <Typography variant="body1">
                                     P.O.BOX 4534 - 00200
                                     <br />
                                     Zimmerman, Nairobi
@@ -65,7 +69,7 @@ export default function Footer() {
                                 </Typography>
                             </Grid>
                             <Grid item sm={4}>
-                                <Typography style={{ display: 'flex' }} variant="text2" color="inherit">
+                                <Typography style={{ display: 'flex' }} variant="body1" color="inherit">
                                     Links:
                                     <ul style={{ display: 'flex', flexDirection: 'column', textDecoration: 'none' }}>
                                         <Link className={classes.links} to='/'>Home</Link>

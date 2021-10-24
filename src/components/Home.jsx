@@ -1,6 +1,6 @@
 import React from 'react';
 import { Parallax } from 'react-parallax';
-import { Typography, Button, Tooltip, Paper, Container, Grid, Fab, Fade } from '@mui/material'
+import { Typography, Button, Tooltip, Paper, Container, Grid, Fab, Fade, useMediaQuery } from '@mui/material'
 import { AccountBalance, DinnerDining, FoodBank, Launch, SportsSoccer } from '@mui/icons-material';
 import { makeStyles } from '@mui/styles';
 import { Link } from 'react-router-dom';
@@ -34,22 +34,21 @@ function Home() {
             name: 'Request Support',
             image: assets.Support
         }
-    ]
+    ];
 
     return (
         <Fade in timeout={1000}>
             <div className='Home' >
                 <Parallax
                     bgImage={assets.home}
-                    strength={500}
-                    blur={{ min: 0, max: 0.5 }}
+                    strength={600}
                 >
-                    <div style={{ height: '85vh' }}>
+                    <div className='page1__parent'>
                         <div className='page1' >
-                            <Typography variant='header1' className={classes.mainText}>Children Deserve the Best</Typography>
+                            <Typography variant='h1' className={classes.mainText}>Children Deserve the Best</Typography>
                             <br />
                             <br />
-                            <Typography variant='text1' align='justify' className={classes.mainText}>
+                            <Typography variant='h2' align='justify' className={classes.mainText}>
                                 The core mission of Vulnerable Children Concern Kenya is to work with our communities to achieve sustainable solutions to ending children poverty.
                             </Typography>
                             <br />
@@ -68,12 +67,12 @@ function Home() {
                 <Container maxWidth='md' className='page2' >
                     <Grid container className='page2__grid' >
                         <Paper className='page2__grid--paper'>
-                            <Typography variant='header1' color='primary'>Our Vision</Typography>
-                            <Typography color="secondary" variant='header2'>
+                            <Typography variant='h1' color='primary'>Our Vision</Typography>
+                            <Typography color="secondary" variant='h5'>
                                 Improving Children Wellbeing and Reducing Poverty in Kenya
                             </Typography>
                             <br />
-                            <Typography align='center' variant='body1'>
+                            <Typography align='center' variant='h6'>
                                 Children comprise more than half of the monetarily poor population (55%) and nearly half (48%) of
                                 the multi-dimensionally poor population. (Kenya National Bureau of Statistics, 2020)
                             </Typography>
@@ -94,8 +93,8 @@ function Home() {
                 <Container maxWidth='lg' >
                     <Grid container className='page2__headline--container'>
                         <Grid item sm={12} className='page2__headline--container-text'>
-                            <Typography variant='header1' color={colors.white} >Join #VCCK</Typography>
-                            <Typography variant='text2' color={colors.white}>
+                            <Typography variant='h1' color={colors.white} >Join #VCCK</Typography>
+                            <Typography variant='h5' color={colors.white}>
                                 Vulnerable Children Concern Kenya (VCCK) is a non-governmental organization registered in Kenya and
                                 is working in five counties namely: Tharakaa Nithi, Meru, Machakos, Nairobi and Kisumu.
                                 <br />
@@ -103,7 +102,8 @@ function Home() {
                                 Join #VCCK to help us reach out to a bigger audience.
                             </Typography>
                             <div style={{ marginTop: '2rem', display: 'flex', justifyContent: 'center' }}>
-                                <Button size='large' variant='contained' fullWidth={false} color='secondary' >Learn More</Button>
+                                <Button component={Link} to='coming-soon' size='large'
+                                    variant='contained' fullWidth={false} color='secondary' >Learn More</Button>
                             </div>
                         </Grid>
                     </Grid>
@@ -111,15 +111,15 @@ function Home() {
                 <Container maxWidth='xl' className='page3' >
                     <Grid container className='page3__programs'>
                         <Grid item sm={6}>
-                            <Typography variant='header1' color='secondary'> VCCK Programs</Typography>
+                            <Typography variant='h1' color='secondary'> VCCK Programs</Typography>
                             <br />
-                            <Typography variant='text2'>
+                            <Typography variant='h2'>
                                 On average we hold semi-annual fundraiser activities where we visit
                                 children in various counties to support them.
                             </Typography>
                             <br />
                             <br />
-                            <Typography variant='text2'>
+                            <Typography variant='h2'>
                                 Each year donors and well-wishers travel with VCCKE to provide food, clothes and support
                                 to the vulnerable children accross the country.
                             </Typography>

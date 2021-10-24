@@ -13,6 +13,9 @@
   width: 100%;
   z-index: 1 !important;
 }
+.page1__parent {
+  height: 85vh;
+}
 .page1 {
   position: absolute;
   width: 800px;
@@ -20,6 +23,20 @@
   left: 170px;
   top: 140px;
 }
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="page"] {
+    width: 100%;
+    left: 0;
+    top: 70px;
+    height: 150px;
+  }
+  [class*="MuiTypography"] {
+    font-size: large !important;
+  }
+}
+
 .page2 {
   height: 20vh;
   background-color: #fff;

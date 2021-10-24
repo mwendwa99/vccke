@@ -6,6 +6,7 @@ import VizSensor from 'react-visibility-sensor';
 import { Link } from 'react-router-dom';
 
 import { QuiltedImageList } from './config/QuiltedImageList';
+import { assets } from '../assets';
 
 const OurWork = () => {
     const [active, setActive] = useState(false);
@@ -14,18 +15,18 @@ const OurWork = () => {
         <Fade in timeout={1000}>
             <Box>
                 <div maxWidth='xl' className='box background-tint'>
-                    <div style={{ height: '30vh' }}>
+                    <div style={{ height: '25vh' }}>
                         <div className='page1' >
-                            <Typography variant='header1' sx={{ color: '#fff' }}>VCCK's Work</Typography>
+                            <Typography variant='h1' sx={{ color: '#fff' }}>VCCK's Work</Typography>
                         </div>
                     </div>
                 </div>
                 <Container maxWidth='xl' className='our-work__container' >
                     <Grid container className='' >
                         <Grid item sm={6} >
-                            <Typography variant='header1' color='primary'>Our Objectives</Typography>
+                            <Typography variant='h1' color='primary'>Our Objectives</Typography>
                             <br />
-                            <Typography align='justify' variant='header2'>
+                            <Typography align='justify' variant='body1'>
                                 We focus on the following key objectives:
                                 <ul>
                                     <li>Undertaking research to develop sustainale solutions to eradicating poverty.</li>
@@ -39,19 +40,19 @@ const OurWork = () => {
                         </Grid>
                         <Grid item sm={6} style={{ padding: '1rem' }} >
                             <img
-                                src="https://images.pexels.com/photos/2305192/pexels-photo-2305192.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                src={assets.vcckMeeting}
                                 width="100%"
                                 height="100%"
-                                alt="" />
+                                alt="donation" />
                         </Grid>
                     </Grid>
                 </Container>
                 <Container maxWidth='xl' className='our-work__container--programs' >
                     <Grid gap={3} container className='page3__programs'>
                         <Grid item sm={6}>
-                            <Typography variant='header1' color='secondary'> VCCK Programs</Typography>
+                            <Typography variant='h1' color='secondary'> VCCK Programs</Typography>
                             <br />
-                            <Typography align='justify' variant='text2'>
+                            <Typography align='justify' variant='body1'>
                                 When we first started working in 2020, we took a straightforward approach.
                                 In the developing world, we supplied medical supplies and equipment to children homes.
                                 <br />
@@ -96,6 +97,7 @@ const OurWork = () => {
                 <VizSensor onChange={(isVisible) => setActive(isVisible)}>
                     <Fade in={true} timeout={100} unmountOnExit={active}>
                         <Container maxWidth='lg' style={{ padding: '1rem' }} >
+                            <Typography variant='h1' color='primary'>Our ongoing programme at Kariadudu, Nairobi</Typography>
                             <QuiltedImageList />
                         </Container>
                     </Fade>
