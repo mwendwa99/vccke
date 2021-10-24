@@ -4,7 +4,6 @@ import { Box } from '@mui/system';
 import { Container, Grid, Typography, TextField, Button } from '@mui/material';
 
 import { colors } from './colors';
-import PhoneInput from "react-phone-number-input";
 import RadioButtonsGroup from "./RadioButtonGroup";
 
 const useStyles = makeStyles((theme) => ({
@@ -29,8 +28,6 @@ const ApplicationForm = ({ nameLabel, emailLabel, phoneLabel, messageLabel }) =>
     const radioValues = async (data) => {
         setDescription(data);
     }
-    console.log(description)
-
     const handleSubmit = async (e) => {
         e.preventDefault();
         setStatus("Sending...");

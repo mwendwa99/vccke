@@ -73,13 +73,12 @@ router.post('/application', (req, res) => {
     const mail = {
         from: from,
         to: process.env.client,
-        subject: "VCCKE form submission",
+        subject: "VCCKE SUPPORT APPLICATION",
         html: `
         <p>Name: ${name} </p>
         <p>Email: ${email} </p>
         <p>Phone: ${number} </p>
-        <p>Description: ${description} </p>
-        <p>Message: ${message} </p>`,
+        <p>Description: Hello I am interested in applying for support as a ${description}. ${message}  </p>`,
         replyTo: from,
     };
     contactEmail.sendMail(mail, (error) => {
