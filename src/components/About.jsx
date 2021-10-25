@@ -49,6 +49,12 @@ const useStyles = makeStyles((theme) => ({
             }
 
         }
+    },
+    titleBar: {
+        height: '30vh',
+        [theme.breakpoints.down('sm')]: {
+            height: '15vh'
+        }
     }
 }));
 const About = () => {
@@ -57,13 +63,13 @@ const About = () => {
     return (
         <Fade in timeout={1000}>
             <Box>
-                <div className='box background-tint'>
-                    <div style={{ height: '30vh' }}>
-                        <div className='page1' >
-                            <Typography variant='h1' sx={{ color: '#fff' }}>About VCCK</Typography>
-                        </div>
-                    </div>
-                </div>
+                <Grid className='box background-tint'>
+                    <Grid className={classes.titleBar}>
+                        <Grid className='page1' >
+                            <Typography variant='h1' align='justify' sx={{ color: '#fff' }}>About VCCK</Typography>
+                        </Grid>
+                    </Grid>
+                </Grid>
                 <Container>
                     <Typography variant="h1" color='primary' >Why VCCKE?</Typography>
                     <br />

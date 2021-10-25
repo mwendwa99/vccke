@@ -1,6 +1,6 @@
 import React from 'react';
 import { Parallax } from 'react-parallax';
-import { Typography, Button, Tooltip, Paper, Container, Grid, Fab, Fade, useMediaQuery } from '@mui/material'
+import { Typography, Button, Tooltip, Paper, Container, Grid, Fab, Fade } from '@mui/material'
 import { AccountBalance, DinnerDining, FoodBank, Launch, SportsSoccer } from '@mui/icons-material';
 import { makeStyles } from '@mui/styles';
 import { Link } from 'react-router-dom';
@@ -35,7 +35,6 @@ function Home() {
             image: assets.SupportMin
         }
     ];
-    const isMobile = useMediaQuery((theme) => theme.breakpoints.down("sm"));
 
     return (
         <Fade in timeout={1000}>
@@ -55,7 +54,7 @@ function Home() {
                             <br />
                             <br />
                             <Tooltip title='Coming soon!'>
-                                <Button size='large' variant='contained' sx={{ mr: 10 }} color='secondary'>
+                                <Button component={Link} to='/coming-soon' size='large' variant='contained' sx={{ mr: 10 }} color='secondary'>
                                     Take Action
                                 </Button>
                             </Tooltip>

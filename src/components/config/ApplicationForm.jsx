@@ -56,31 +56,31 @@ const ApplicationForm = ({ nameLabel, emailLabel, phoneLabel, messageLabel }) =>
                 <form className={classes.root} onSubmit={handleSubmit}>
                     <Typography variant='h5' color='secondary'> {info} </Typography>
                     <Grid container className={classes.gridContainer}>
-                        <Grid item sm={12} className={classes.gridItem}>
+                        <Grid item sm={12} xs={12} className={classes.gridItem}>
                             <TextField
                                 required={true}
                                 color='primary'
                                 helperText={`Enter ${nameLabel} here...`}
                                 id={nameLabel} label={nameLabel} fullWidth variant="outlined" />
                         </Grid>
-                        <Grid item sm={12} className={classes.gridItem}>
+                        <Grid item sm={12} xs={12} className={classes.gridItem}>
                             <TextField
                                 required={true}
                                 color='primary'
                                 helperText={`Please enter your ${emailLabel}`}
                                 fullWidth id={emailLabel} label={emailLabel} variant="outlined" />
                         </Grid>
-                        <Grid item sm={12} className={classes.gridItem}>
+                        <Grid item sm={12} xs={12} className={classes.gridItem}>
                             <TextField
                                 required={true}
                                 color='primary'
                                 helperText={`Please enter your phone ${phoneLabel}`}
                                 fullWidth id={phoneLabel} label={phoneLabel} variant="outlined" />
                         </Grid>
-                        <Grid item sm={12} className={classes.gridItem}>
+                        <Grid item sm={12} xs={12} className={classes.gridItem}>
                             <RadioButtonsGroup radioValues={radioValues} />
                         </Grid>
-                        <Grid item sm={12} className={classes.gridItem}>
+                        <Grid item sm={12} xs={12} className={classes.gridItem}>
                             <TextField
                                 required={true}
                                 color='primary'
@@ -93,7 +93,7 @@ const ApplicationForm = ({ nameLabel, emailLabel, phoneLabel, messageLabel }) =>
                                 variant="filled"
                             />
                         </Grid>
-                        <Grid item sm={12}>
+                        <Grid item sm={12} xs={12} >
                             <Button variant='contained' size='large' color='primary' type="submit">{status}</Button>
                         </Grid>
                     </Grid>

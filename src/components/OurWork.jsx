@@ -7,26 +7,37 @@ import { Link } from 'react-router-dom';
 
 import { QuiltedImageList } from './config/QuiltedImageList';
 import { assets } from '../assets';
+import { makeStyles } from '@mui/styles';
+
+const useStyles = makeStyles((theme) => ({
+    titleBar: {
+        height: '30vh',
+        [theme.breakpoints.down('sm')]: {
+            height: '15vh'
+        }
+    }
+}))
 
 const OurWork = () => {
     const [active, setActive] = useState(false);
+    const classes = useStyles();
 
     return (
         <Fade in timeout={1000}>
             <Box>
-                <div maxWidth='xl' className='box background-tint'>
-                    <div style={{ height: '25vh' }}>
-                        <div className='page1' >
+                <Grid maxWidth='xl' className='box background-tint'>
+                    <Grid className={classes.titleBar}>
+                        <Grid className='page1' >
                             <Typography variant='h1' sx={{ color: '#fff' }}>VCCK's Work</Typography>
-                        </div>
-                    </div>
-                </div>
+                        </Grid>
+                    </Grid>
+                </Grid>
                 <Container maxWidth='xl' className='our-work__container' >
                     <Grid container className='' >
                         <Grid item sm={6} >
                             <Typography variant='h1' color='primary'>Our Objectives</Typography>
                             <br />
-                            <Typography align='justify' variant='body1'>
+                            <Typography align='left' variant='body1'>
                                 We focus on the following key objectives:
                                 <ul>
                                     <li>Undertaking research to develop sustainale solutions to eradicating poverty.</li>

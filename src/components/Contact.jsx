@@ -10,6 +10,9 @@ const useStyles = makeStyles((theme) => ({
     root: {
         backgroundColor: colors.grey,
         textAlign: 'center'
+    },
+    titleBar: {
+        height: '30vh'
     }
 }))
 
@@ -19,7 +22,7 @@ const Contact = () => {
     return (
         <Fade in timeout={1000}>
             <Box className='box background-tint'>
-                <Grid container style={{ height: '30vh' }}>
+                <Grid container className={classes.titleBar}>
                     <Grid item className='page1' >
                         <Typography variant='h1' sx={{ color: '#fff' }}>Contact Us</Typography>
                     </Grid>

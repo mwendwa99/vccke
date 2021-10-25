@@ -40,8 +40,8 @@ export default function Footer() {
     return (
         <Box sx={{ flexGrow: 1, height: '100%' }}>
             <AppBar className={classes.root} position="static" color='orange'>
-                <Container maxWidth="xl">
-                    <Toolbar >
+                <Toolbar >
+                    <Container maxWidth="xl">
                         <Grid container className={classes.gridContainer}>
                             <Grid item sm={4}>
                                 <IconButton
@@ -59,13 +59,13 @@ export default function Footer() {
                                 </Typography>
                             </Grid>
                             <Grid item sm={4}>
-                                <Typography variant="body1">
+                                <Typography variant="body1" gutterBottom>
                                     P.O.BOX 4534 - 00200
                                     <br />
                                     Zimmerman, Nairobi
                                     <br />
-                                    <br />
                                     Tel: 0722894325
+                                    <br />
                                 </Typography>
                             </Grid>
                             <Grid item sm={4}>
@@ -86,8 +86,8 @@ export default function Footer() {
                                 <Twitter fontSize='large' />
                             </Grid>
                         </Grid>
-                    </Toolbar>
-                </Container>
+                    </Container>
+                </Toolbar>
             </AppBar>
         </Box>
     )

@@ -77,14 +77,13 @@
       rgba(44, 172, 71, 0.6)
     ),
     url("./assets/children.jpg");
-  padding: 3rem;
+  padding: 1rem;
   margin-bottom: 1rem;
 }
 .page2__headline--container-text {
   height: 100%;
   width: 100%;
   display: flex;
-  padding: 1rem;
   flex-direction: column !important;
   justify-content: center !important;
 }

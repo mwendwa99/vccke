@@ -75,7 +75,7 @@ const ContactForm = ({ nameLabel, emailLabel, messageLabel }) => {
                                 variant="filled"
                             />
                         </Grid>
-                        <Grid item sm={12}>
+                        <Grid item xs={12}>
                             <Button variant='contained' size='large' color='primary' type="submit">{status}</Button>
                         </Grid>
                     </Grid>

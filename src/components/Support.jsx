@@ -10,6 +10,12 @@ const useStyles = makeStyles((theme) => ({
     root: {
         backgroundColor: colors.grey,
         textAlign: 'center'
+    },
+    titleBar: {
+        height: '30vh',
+        [theme.breakpoints.down('sm')]: {
+            height: '15vh'
+        }
     }
 }))
 
@@ -19,7 +25,7 @@ const Support = () => {
     return (
         <Fade in timeout={1000}>
             <Box className='box background-tint'>
-                <Grid container style={{ height: '30vh' }}>
+                <Grid container className={classes.titleBar}>
                     <Grid item className='page1' >
                         <Typography variant='h1' sx={{ color: '#fff' }}>Request Support</Typography>
                     </Grid>
@@ -35,7 +41,7 @@ const Support = () => {
                                 If this is urgent, please contact us directly at  +254-722-894-325.
                             </Typography>
                         </Grid>
-                        <Grid sx={{ padding: 5 }} item sm={12}>
+                        <Grid item sm={12}>
                             <ApplicationForm
                                 nameLabel='name'
                                 emailLabel='email'
