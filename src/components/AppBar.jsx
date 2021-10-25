@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 
 import { assets } from '../assets';
 import { Fab, IconButton, ListItemIcon, Menu, MenuItem, Slide, Tooltip, useMediaQuery, useScrollTrigger } from '@mui/material';
-import { Bookmarks, Home, Person, MenuRounded, FavoriteRounded, ChildCareRounded, ContactsRounded } from '@mui/icons-material';
+import { Home, MenuRounded, FavoriteRounded, ChildCareRounded, ContactsRounded } from '@mui/icons-material';
 
 const useStyles = makeStyles((theme) => ({
     root: {

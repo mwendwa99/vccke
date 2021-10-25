@@ -18,19 +18,23 @@
 }
 .page1 {
   position: absolute;
-  width: 800px;
-  height: 300px;
-  left: 170px;
-  top: 140px;
+  width: 50rem;
+  height: 18.75rem;
+  left: 10.625rem;
+  top: 8.75rem;
+  padding: 1rem;
 }
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
-  [class*="page"] {
+  .page1__parent {
+    height: 30rem;
+  }
+  .page1 {
     width: 100%;
     left: 0;
-    top: 70px;
-    height: 150px;
+    top: 4.375rem;
+    height: 31.25rem;
   }
   [class*="MuiTypography"] {
     font-size: large !important;
@@ -39,11 +43,9 @@
 
 .page2 {
   height: 20vh;
-  background-color: #fff;
   position: relative;
 }
 .page2__grid {
-  background-color: red;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -63,8 +65,8 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-content: center;
+  justify-content: center !important;
+  align-content: center !important;
 }
 .page2__headline--container {
   height: 100%;
@@ -86,6 +88,15 @@
   flex-direction: column !important;
   justify-content: center !important;
 }
+
+@media screen and (max-width: 768px) {
+  .page2 {
+    height: 25vh;
+  }
+  .page2__card--container {
+    flex-direction: column !important;
+  }
+}
 .page3 {
   position: relative;
   background: linear-gradient(
@@ -97,7 +108,6 @@
   height: 70vh;
   background-repeat: no-repeat;
   background-size: auto;
-  margin-bottom: 1rem;
 }
 .page3__programs {
   height: 100%;
@@ -107,10 +117,11 @@
   align-items: center;
 }
 .page3__programs--buttons {
-  margin-top: 3rem !important;
+  /* margin-top: 3rem !important; */
   display: flex;
   flex-direction: column !important;
   justify-content: center;
+  padding: 1rem;
 }
 .our-work__container {
   padding: 1rem;

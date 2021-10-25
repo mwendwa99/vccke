@@ -3,6 +3,7 @@ export const assets = {
     home: require('./home.jpg').default,
     Volunteer: require('./volunteer.png').default,
     Support: require('./support.png').default,
+    SupportMin: require('./SupportMin.png').default,
     Donate: require('./donate.png').default,
     team: require('./team.png').default,
     vcckMeeting: require('./vcckMeeting.jpg').default,

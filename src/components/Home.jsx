@@ -9,14 +9,14 @@ import { assets } from '../assets';
 import { colors } from './config/colors';
 import ActionAreaCard from './config/ActionAreaCard';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
     mainText: {
         color: colors.white,
         textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
     },
     links: {
         textDecoration: 'none',
-    }
+    },
 }));
 
 function Home() {
@@ -32,9 +32,10 @@ function Home() {
         },
         {
             name: 'Request Support',
-            image: assets.Support
+            image: assets.SupportMin
         }
     ];
+    const isMobile = useMediaQuery((theme) => theme.breakpoints.down("sm"));
 
     return (
         <Fade in timeout={1000}>
@@ -43,8 +44,8 @@ function Home() {
                     bgImage={assets.home}
                     strength={600}
                 >
-                    <div className='page1__parent'>
-                        <div className='page1' >
+                    <Grid container className='page1__parent'>
+                        <Grid item className='page1' >
                             <Typography variant='h1' className={classes.mainText}>Children Deserve the Best</Typography>
                             <br />
                             <br />
@@ -61,8 +62,8 @@ function Home() {
                             <Button size='large' variant='contained' color='neutral' >
                                 <Link className={classes.links} to='/contact'>Contact Us</Link>
                             </Button>
-                        </div>
-                    </div>
+                        </Grid>
+                    </Grid>
                 </Parallax>
                 <Container maxWidth='md' className='page2' >
                     <Grid container className='page2__grid' >
@@ -81,7 +82,7 @@ function Home() {
                 </Container>
                 <Container maxWidth='lg'>
                     <Grid container >
-                        <Grid className='page2__card--container' item sm={12}>
+                        <Grid className='page2__card--container' item xs={12}>
                             {
                                 values.map((item, id) =>
                                     <ActionAreaCard key={id} pos={id} item={item} />
