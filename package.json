@@ -35,6 +35,7 @@
     "dev": "concurrently \"yarn run server\" \"yarn run client\"",
     "build": "yarn build"
   },
+  "proxy": "http://localhost:5000",
   "eslintConfig": {
     "extends": [
       "react-app",

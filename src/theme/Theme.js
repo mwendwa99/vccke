@@ -8,7 +8,7 @@ export const AppTheme = createTheme({
         },
         secondary: {
             main: '#ED018A',
-            contrastText: '#000'
+            contrastText: '#fff'
         },
         header: {
             main: '#000'
