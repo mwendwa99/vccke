@@ -7,10 +7,11 @@ const path = require('path');
 dotenv.config();
 const router = express.Router();
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT;
 
 // build path
-const buildPath = path.join(__dirname, '..', 'build');
+// const buildPath = path.join(__dirname, '..', 'build');
+const buildPath = path.join(__dirname, './client/build');
 app.use(express.static(buildPath));
 
 // middlewares
@@ -89,4 +90,9 @@ router.post('/application', (req, res) => {
         }
 
     });
+});
+
+//The 404 Route (ALWAYS Keep this as the last route)
+app.use(function (req, res, next) {
+    res.status(404).render('404_error_template', { title: "Sorry, page not found" });
 });

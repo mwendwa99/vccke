@@ -12,7 +12,10 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'center'
     },
     titleBar: {
-        height: '30vh'
+        height: '30vh',
+        [theme.breakpoints.down('sm')]: {
+            height: '15vh'
+        }
     }
 }))
 

@@ -1,57 +1,16 @@
 {
   "name": "vccke",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "vccke website",
+  "main": "index.js",
+  "repository": "https://github.com/mwendwa99/vccke.git",
+  "author": "Brian Mwendwa <brianmwendwa.mu@gmail.com>",
+  "license": "MIT",
   "dependencies": {
-    "@emotion/react": "^11.4.1",
-    "@emotion/styled": "^11.3.0",
-    "@mui/icons-material": "^5.0.1",
-    "@mui/material": "^5.0.2",
-    "@mui/styles": "^5.0.1",
-    "@react-spring/parallax": "^9.3.0",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "classnames": "^2.3.1",
-    "concurrently": "^6.3.0",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "nodemailer": "^6.7.0",
-    "nodemon": "^2.0.13",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-parallax": "^3.3.0",
-    "react-phone-number-input": "^3.1.35",
-    "react-router-dom": "^5.3.0",
-    "react-scripts": "4.0.3",
-    "react-visibility-sensor": "^5.1.1",
-    "web-vitals": "^1.0.1"
-  },
-  "scripts": {
-    "start": "node Server.js",
-    "server": "nodemon",
-    "client": "react-scripts start",
-    "dev": "concurrently \"yarn run server\" \"yarn run client\"",
-    "build": "yarn build"
-  },
-  "proxy": "http://localhost:5000",
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "nodemon": "^2.0.14"
   }
 }
