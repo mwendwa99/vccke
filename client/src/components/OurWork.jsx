@@ -58,7 +58,7 @@ const OurWork = () => {
                         </Grid>
                     </Grid>
                 </Container>
-                <Container maxWidth='xl' className='our-work__container--programs' >
+                <Container maxWidth='lg' className='our-work__container--programs' >
                     <Grid gap={3} container className='page3__programs'>
                         <Grid item sm={6}>
                             <Typography variant='h1' color='secondary'> VCCK Programs</Typography>

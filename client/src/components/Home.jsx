@@ -80,21 +80,19 @@ function Home() {
                     </Grid>
                 </Container>
                 <Container maxWidth='lg'>
-                    <Grid container >
-                        <Grid className='page2__card--container' item xs={12}>
-                            {
-                                values.map((item, id) =>
-                                    <ActionAreaCard key={id} pos={id} item={item} />
-                                )
-                            }
-                        </Grid>
+                    <Grid className='page2__card--container' item xs={12}>
+                        {
+                            values.map((item, id) =>
+                                <ActionAreaCard key={id} pos={id} item={item} />
+                            )
+                        }
                     </Grid>
                 </Container>
-                <Container maxWidth='lg' >
+                <Container maxWidth='xl' >
                     <Grid container className='page2__headline--container'>
-                        <Grid item sm={12} className='page2__headline--container-text'>
-                            <Typography variant='h1' color={colors.white} >Join #VCCK</Typography>
-                            <Typography variant='h5' color={colors.white}>
+                        <Grid item xs={12} className='page2__headline--container-text'>
+                            <Typography variant='h1' align='center' color={colors.white} >Join #VCCK</Typography>
+                            <Typography variant='h4' color={colors.white}>
                                 Vulnerable Children Concern Kenya (VCCK) is a non-governmental organization registered in Kenya and
                                 is working in five counties namely: Tharakaa Nithi, Meru, Machakos, Nairobi and Kisumu.
                                 <br />
@@ -124,31 +122,31 @@ function Home() {
                                 to the vulnerable children accross the country.
                             </Typography>
                         </Grid>
-                        <Grid item sm={2.5} className='page3__programs--buttons' >
+                        <Grid item sm={3} className='page3__programs--buttons' >
                             <Fab component={Link} to='/coming-soon' sx={{ mt: 1 }} variant='extended' color="primary" aria-label="soccer">
                                 <SportsSoccer sx={{ mr: 1 }} fontSize='medium' />
-                                <Typography sx={{ mr: 'auto', textTransform: 'capitalize' }} variant='body1'>
+                                <Typography sx={{ mr: 'auto', textTransform: 'capitalize' }} variant='body'>
                                     Sports Events
                                 </Typography>
                                 <Launch />
                             </Fab>
                             <Fab component={Link} to='/coming-soon' sx={{ mt: 1 }} variant='extended' color="primary" aria-label="soccer">
                                 <FoodBank sx={{ mr: 1 }} fontSize='medium' />
-                                <Typography sx={{ mr: 'auto', textTransform: 'capitalize' }} variant='body1'>
+                                <Typography sx={{ mr: 'auto', textTransform: 'capitalize' }} variant='body'>
                                     Cookouts
                                 </Typography>
                                 <Launch />
                             </Fab>
                             <Fab component={Link} to='/coming-soon' sx={{ mt: 1 }} variant='extended' color="primary" aria-label="soccer">
                                 <AccountBalance sx={{ mr: 1 }} fontSize='medium' />
-                                <Typography sx={{ mr: 'auto', textTransform: 'capitalize' }} variant='body1'>
+                                <Typography sx={{ mr: 'auto', textTransform: 'capitalize' }} variant='body'>
                                     Fundraisers
                                 </Typography>
                                 <Launch />
                             </Fab>
                             <Fab component={Link} to='/coming-soon' sx={{ mt: 1 }} variant='extended' color="primary" aria-label="soccer">
                                 <DinnerDining sx={{ mr: 1 }} fontSize='medium' />
-                                <Typography sx={{ mr: 'auto', textTransform: 'capitalize' }} variant='body1'>
+                                <Typography sx={{ mr: 'auto', textTransform: 'capitalize' }} variant='body'>
                                     Dinners
                                 </Typography>
                                 <Launch />

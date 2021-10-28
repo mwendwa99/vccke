@@ -97,7 +97,7 @@ const About = () => {
                         <br />
                     </Typography>
                 </Container>
-                <Container className={classes.missionContainer} maxWidth='xl'>
+                <Container className={classes.missionContainer} maxWidth='lg'>
                     <Grid className={classes.gridContainer} container>
                         <Typography variant='h1' align='center'>
                             <strong>The VCCK Mission</strong>

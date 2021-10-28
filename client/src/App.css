@@ -75,18 +75,18 @@
       0deg,
       rgba(44, 172, 71, 0.6),
       rgba(44, 172, 71, 0.6)
-    ),
-    url("./assets/children.jpg");
-  padding: 1rem;
+    ),url("./assets/children.jpg");
+  background-repeat: no-repeat;
+  padding: 3rem;
   margin-bottom: 1rem;
 }
-.page2__headline--container-text {
+/* .page2__headline--container-text {
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column !important;
   justify-content: center !important;
-}
+} */
 
 @media screen and (max-width: 768px) {
   .page2 {
