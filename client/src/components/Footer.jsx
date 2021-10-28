@@ -64,7 +64,7 @@ export default function Footer() {
                                     <br />
                                     Zimmerman, Nairobi
                                     <br />
-                                    Tel: 0722894325
+                                    Tel: +254-732-855-686
                                     <br />
                                 </Typography>
                             </Grid>

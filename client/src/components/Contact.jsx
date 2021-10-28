@@ -40,7 +40,7 @@ const Contact = () => {
                             <Typography variant='body1'>
                                 Thank you for contacting VCCK Someone from our team will respond to your inquiry within 3 business days.
                                 <br />
-                                If this is urgent, please contact us directly at  +254-722-894-325.
+                                If this is urgent, please contact us directly at  +254-732-855-686.
                             </Typography>
                         </Grid>
                         <Grid sx={{ padding: 5 }} item sm={12}>

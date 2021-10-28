@@ -11,6 +11,12 @@ const useStyles = makeStyles((theme) => ({
     root: {
         backgroundColor: colors.white,
     },
+    titleBar: {
+        height: '30vh',
+        [theme.breakpoints.down('sm')]: {
+            height: '15vh'
+        }
+    },
     gridContainer: {
         padding: theme.spacing(2),
     },
@@ -36,7 +42,7 @@ const Volunteer = () => {
     return (
         <Fade in timeout={1000}>
             <Box className='box background-tint'>
-                <Grid container style={{ height: '30vh' }}>
+                <Grid container className={classes.titleBar}>
                     <Grid item className='page1' >
                         <Typography variant='h1' sx={{ color: colors.white }}>Volunteer</Typography>
                     </Grid>
@@ -116,7 +122,7 @@ const Volunteer = () => {
                                 Friday, 9 a.m. to 5 p.m., and we ask that warehouse volunteers commit to serve at least 3 hours every month.
                             </Typography>
                         </Grid>
-                        <Grid item sm={12}>
+                        <Grid item xs={12}>
                             <Link to='/contact' className={classes.links}>
                                 <Button size='large' variant='contained' color='primary' >
                                     Contact Us

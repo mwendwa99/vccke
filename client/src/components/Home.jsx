@@ -68,7 +68,7 @@ function Home() {
                     <Grid container className='page2__grid' >
                         <Paper className='page2__grid--paper'>
                             <Typography variant='h1' color='primary'>Our Vision</Typography>
-                            <Typography color="secondary" variant='h5'>
+                            <Typography color="secondary" align='center' variant='h2'>
                                 Improving Children Wellbeing and Reducing Poverty in Kenya
                             </Typography>
                             <br />
