@@ -39,7 +39,7 @@ const ApplicationForm = ({ nameLabel, emailLabel, phoneLabel, messageLabel }) =>
             description: description,
             message: message.value,
         };
-        let response = await fetch("http://localhost:5000/application", {
+        let response = await fetch("http://vcck.org/api/application", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json;charset=utf-8",

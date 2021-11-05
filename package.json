@@ -1,9 +1,12 @@
 {
-  "name": "vccke",
+  "name": "vcck",
   "version": "1.0.0",
   "description": "vccke website",
   "main": "index.js",
-  "repository": "https://github.com/mwendwa99/vccke.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mwendwa99/vccke.git"
+  },
   "author": "Brian Mwendwa <brianmwendwa.mu@gmail.com>",
   "license": "MIT",
   "dependencies": {
@@ -12,5 +15,14 @@
     "express": "^4.17.1",
     "nodemailer": "^6.7.0",
     "nodemon": "^2.0.14"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/mwendwa99/vccke/issues"
+  },
+  "homepage": "https://github.com/mwendwa99/vccke#readme",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": []
 }

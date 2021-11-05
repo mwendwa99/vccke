@@ -38,7 +38,7 @@ const Support = () => {
                             </Typography>
                             <br />
                             <Typography variant='body1'>
-                                If this is urgent, please contact us directly at  +254-722-894-325.
+                                If this is urgent, please contact us directly at  +254-723-842-810.
                             </Typography>
                         </Grid>
                         <Grid item sm={12}>

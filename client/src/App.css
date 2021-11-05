@@ -80,13 +80,6 @@
   padding: 3rem;
   margin-bottom: 1rem;
 }
-/* .page2__headline--container-text {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column !important;
-  justify-content: center !important;
-} */
 
 @media screen and (max-width: 768px) {
   .page2 {

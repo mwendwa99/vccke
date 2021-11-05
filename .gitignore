@@ -4,12 +4,15 @@
 /node_modules
 /.pnp
 .pnp.js
+.zip
 
 # testing
 /coverage
 
 # production
 /build
+/build.zip
+/vcckebackend.zip
 
 # misc
 .env

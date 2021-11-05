@@ -17,7 +17,7 @@ app.use(express.static(buildPath));
 // middlewares
 app.use(cors());
 app.use(express.json());
-app.use('/', router);
+app.use('/api', router);
 app.listen(PORT, () => console.log(`server running on port: ${PORT}`));
 
 // default SMTP service : gmail

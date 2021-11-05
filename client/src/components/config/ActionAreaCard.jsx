@@ -10,10 +10,7 @@ import { Link } from 'react-router-dom';
 
 import { colors } from './colors';
 
-const useStyles = makeStyles((theme) => ({
-    root: {
-        margin: theme.spacing(1)
-    },
+const useStyles = makeStyles(() => ({
     links: {
         textDecoration: 'none',
         color: '#fff',
@@ -30,25 +27,23 @@ export default function ActionAreaCard({ item, pos }) {
     const color = Object.values(colors)[pos]
 
     return (
-        <Grid container className={classes.root}>
-            <Card sx={{ bgcolor: color, width: '100%' }}>
-                <CardMedia
-                    component="img"
-                    width="100%"
-                    image={item.image}
-                    alt={item.name}
-                />
-                <CardActionArea >
-                    <CardContent>
-                        <Link className={classes.links} to={`${item.name.toLowerCase()}`}>
-                            <Typography variant='body1' className={classes.text}>
-                                {item.name}
-                                <OpenInNew fontSize='large' />
-                            </Typography>
-                        </Link>
-                    </CardContent>
-                </CardActionArea>
-            </Card >
-        </Grid>
+        <Card sx={{ bgcolor: color, width: '100%', margin: '0.5rem' }}>
+            <CardMedia
+                component="img"
+                width="100%"
+                image={item.image}
+                alt={item.name}
+            />
+            <CardActionArea >
+                <CardContent>
+                    <Link className={classes.links} to={`${item.name.toLowerCase()}`}>
+                        <Typography variant='body1' className={classes.text}>
+                            {item.name}
+                            <OpenInNew fontSize='large' />
+                        </Typography>
+                    </Link>
+                </CardContent>
+            </CardActionArea>
+        </Card >
     );
 }

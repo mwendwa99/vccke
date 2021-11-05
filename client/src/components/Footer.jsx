@@ -64,7 +64,7 @@ export default function Footer() {
                                     <br />
                                     Zimmerman, Nairobi
                                     <br />
-                                    Tel: +254-732-855-686
+                                    Tel: +254-723-842-810
                                     <br />
                                 </Typography>
                             </Grid>
@@ -81,8 +81,12 @@ export default function Footer() {
                                 </Typography>
                             </Grid>
                             <Grid className={classes.socials} item sm={5}>
-                                <Facebook fontSize='large' />
-                                <Instagram fontSize='large' />
+                                <a href="https://www.facebook.com/Vulnerable-Children-Concern-Kenya-102475591607798/" target="_blank" rel="noopener noreferrer">
+                                    <Facebook fontSize='large' />
+                                </a>
+                                <a href="https://www.instagram.com/vcckenya/" target="_blank" rel="noopener noreferrer">
+                                    <Instagram fontSize='large' />
+                                </a>
                                 <Twitter fontSize='large' />
                             </Grid>
                         </Grid>
