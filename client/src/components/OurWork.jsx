@@ -25,10 +25,10 @@ const OurWork = () => {
     return (
         <Fade in timeout={1000}>
             <Box>
-                <Grid maxWidth='xl' className='box background-tint'>
+                <Grid className='box background-tint'>
                     <Grid className={classes.titleBar}>
                         <Grid className='page1' >
-                            <Typography variant='h1' sx={{ color: '#fff' }}>VCCK's Work</Typography>
+                            <Typography variant='h1' align='justify' sx={{ color: '#fff' }}>Our Work</Typography>
                         </Grid>
                     </Grid>
                 </Grid>
@@ -107,8 +107,8 @@ const OurWork = () => {
                 </Container>
                 <VizSensor onChange={(isVisible) => setActive(isVisible)}>
                     <Fade in={true} timeout={100} unmountOnExit={active}>
-                        <Container maxWidth='lg' style={{ padding: '1rem' }} >
-                            <Typography variant='h1' color='primary'>Our ongoing programme at Kariadudu, Nairobi</Typography>
+                        <Container maxWidth='xl' style={{ padding: '1rem' }} >
+                            <Typography variant='h1' align='center' color='primary'>Our ongoing programme at Kariadudu, Nairobi</Typography>
                             <QuiltedImageList />
                         </Container>
                     </Fade>

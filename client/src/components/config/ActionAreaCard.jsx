@@ -19,7 +19,12 @@ const useStyles = makeStyles(() => ({
         display: 'flex',
         justifyContent: 'space-between',
         alignContent: 'center'
-    }
+    },
+    media: {
+        width: '33%',
+        backgroundSize: 'cover',
+    },
+
 }))
 
 export default function ActionAreaCard({ item, pos }) {
@@ -27,12 +32,12 @@ export default function ActionAreaCard({ item, pos }) {
     const color = Object.values(colors)[pos]
 
     return (
-        <Card sx={{ bgcolor: color, width: '100%', margin: '0.5rem' }}>
+        <Card sx={{ bgcolor: color, width: '100%', margin: '0.5rem', maxWidth: 400 }}>
             <CardMedia
                 component="img"
-                width="100%"
+                className={classes.media}
                 image={item.image}
-                alt={item.name}
+                title={item.name}
             />
             <CardActionArea >
                 <CardContent>

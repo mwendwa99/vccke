@@ -1,36 +1,26 @@
 import * as React from 'react';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
-import { ImageListItemBar } from '@mui/material';
+import { Box, ImageListItemBar } from '@mui/material';
 
 import { assets } from '../../assets'
 
-function srcset(image, size, rows = 1, cols = 1) {
-    return {
-        src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
-        srcSet: `${image}?w=${size * cols}&h=${size * rows
-            }&fit=crop&auto=format&dpr=2 2x`,
-    };
-}
-
 export function QuiltedImageList() {
     return (
-        <ImageList
-            sx={{ width: '100%', height: '100%' }}
-            variant="quilted"
-            cols={7}
-            rowHeight={150}
-        >
-            {itemData.map((item) => (
-                <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
-                    <img
-                        {...srcset(item.img, 121, item.rows, item.cols)}
-                        alt={item.title}
-                        loading="lazy"
-                    />
-                </ImageListItem>
-            ))}
-        </ImageList>
+        <Box sx={{ width: '100%', height: 600, overflowY: 'scroll' }}>
+            <ImageList variant="masonry" cols={3} gap={8}>
+                {itemData.map((item) => (
+                    <ImageListItem key={item.img}>
+                        <img
+                            src={`${item.img}?w=248&fit=crop&auto=format`}
+                            srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                            alt={item.title}
+                            loading="lazy"
+                        />
+                    </ImageListItem>
+                ))}
+            </ImageList>
+        </Box>
     );
 }
 
@@ -38,28 +28,67 @@ const itemData = [
     {
         img: assets.vcckChildren1,
         title: 'child and mum',
-        rows: 2,
-        cols: 2,
     },
     {
         img: assets.vcck3,
         title: 'donation',
-        cols: 2,
     },
     {
         img: assets.vcck4,
         title: 'donation kariadudu',
     },
     {
+        img: assets.k1,
+        title: 'kariadudu',
+    },
+    {
+        img: assets.k2,
+        title: 'kariadudu',
+
+    },
+    {
+        img: assets.k3,
+        title: 'kariadudu',
+
+    },
+    {
+        img: assets.k4,
+        title: 'kariadudu',
+
+    },
+    {
+        img: assets.k5,
+        title: 'kariadudu',
+
+    },
+    {
+        img: assets.k6,
+        title: 'kariadudu',
+
+    },
+    {
+        img: assets.k7,
+        title: 'kariadudu',
+
+    },
+    {
+        img: assets.k8,
+        title: 'kariadudu',
+
+    },
+    {
+        img: assets.k10,
+        title: 'kariadudu',
+
+    },
+    {
         img: assets.vcck5,
         title: 'happy',
-        rows: 2,
-        cols: 2,
     },
     {
         img: assets.vcck7,
         title: 'kariadudu',
-        cols: 2,
+        rows: 2,
     },
     {
         img: assets.vcck6,
@@ -68,7 +97,6 @@ const itemData = [
     {
         img: assets.vcckChildren2,
         title: 'childrens day',
-        cols: 2,
     },
 ];
 // ***********************************************************************

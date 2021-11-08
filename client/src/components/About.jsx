@@ -16,31 +16,31 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: colors.primary,
     },
     gridContainer: {
-        padding: theme.spacing(3),
+        padding: theme.spacing(2),
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         color: 'white'
     },
     gridItem: {
-        padding: theme.spacing(3),
+        padding: theme.spacing(1),
         color: 'white'
     },
     locationContainer: {
-        padding: theme.spacing(3)
+        padding: theme.spacing(2)
     },
     teamContainer: {
         backgroundColor: colors.grey
     },
     teamGridContainer: {
-        padding: theme.spacing(3)
+        padding: theme.spacing(2)
     },
     teamGridItem: {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        padding: theme.spacing(3),
+        padding: theme.spacing(2),
         [theme.breakpoints.down('sm')]: {
             flexDirection: 'column',
             '& img': {
@@ -110,7 +110,7 @@ const About = () => {
                         </Typography>
                     </Grid>
                     <Grid container className={classes.gridContainer} >
-                        <Grid item sm={3} className={classes.gridItem}>
+                        <Grid item sm={4} className={classes.gridItem}>
                             <Typography align='center' variant='h2'>
                                 <strong>Quality Service</strong>
                             </Typography>
@@ -119,7 +119,7 @@ const About = () => {
                                 and the sick and dying all over the world.
                             </Typography>
                         </Grid>
-                        <Grid item sm={3} className={classes.gridItem}>
+                        <Grid item sm={4} className={classes.gridItem}>
                             <Typography align='center' variant='h2'>
                                 <strong>Accountability</strong>
                             </Typography>
@@ -128,7 +128,7 @@ const About = () => {
                                 to the ones we have already made.
                             </Typography>
                         </Grid>
-                        <Grid item sm={3} className={classes.gridItem}>
+                        <Grid item sm={4} className={classes.gridItem}>
                             <Typography align='center' variant='h2'>
                                 <strong>Competence</strong>
                             </Typography>

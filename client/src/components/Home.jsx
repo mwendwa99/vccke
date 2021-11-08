@@ -17,6 +17,10 @@ const useStyles = makeStyles((theme) => ({
     links: {
         textDecoration: 'none',
     },
+    paper: {
+        padding: theme.spacing(2),
+        margin: theme.spacing(2),
+    },
 }));
 
 function Home() {
@@ -40,12 +44,14 @@ function Home() {
         <Fade in timeout={1000}>
             <div className='Home' >
                 <Parallax
-                    bgImage={assets.home}
+                    bgImage={assets.happykids3}
                     strength={600}
                 >
                     <Grid container className='page1__parent'>
                         <Grid item className='page1' >
-                            <Typography variant='h1' className={classes.mainText}>Children Deserve the Best</Typography>
+                            <Typography variant='h1' color='primary' className={classes.mainText}>
+                                Children Deserve the Best
+                            </Typography>
                             <br />
                             <br />
                             <Typography variant='h2' align='justify' className={classes.mainText}>
@@ -64,10 +70,10 @@ function Home() {
                         </Grid>
                     </Grid>
                 </Parallax>
-                <Container maxWidth='md' className='page2' >
-                    <Grid container className='page2__grid' >
-                        <Paper className='page2__grid--paper'>
-                            <Typography variant='h1' color='primary'>Our Vision</Typography>
+                <Container maxWidth='lg' >
+                    <Grid container>
+                        <Paper className={classes.paper}>
+                            <Typography variant='h1' color='primary' align='center'>Our Vision</Typography>
                             <Typography color="secondary" align='center' variant='h2'>
                                 Improving Children Wellbeing and Reducing Poverty in Kenya
                             </Typography>
@@ -88,7 +94,7 @@ function Home() {
                         }
                     </Grid>
                 </Container>
-                <Container maxWidth='xl' >
+                <Container maxWidth='lg' >
                     <Grid container className='page2__headline--container'>
                         <Grid item xs={12} className='page2__headline--container-text'>
                             <Typography variant='h1' align='center' color={colors.white} >Join #VCCK</Typography>
@@ -106,7 +112,7 @@ function Home() {
                         </Grid>
                     </Grid>
                 </Container>
-                <Container maxWidth='xl' className='page3' >
+                <Container maxWidth='lg' className='page3' >
                     <Grid container className='page3__programs'>
                         <Grid item sm={6}>
                             <Typography variant='h1' color='secondary'> VCCK Programs</Typography>

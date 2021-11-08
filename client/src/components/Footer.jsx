@@ -30,7 +30,9 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         justifyContent: 'space-around',
         width: '50%',
-        padding: '0.1rem'
+        padding: '0.1rem',
+        textDecoration: 'none',
+        color: '#000',
     }
 }))
 
@@ -87,7 +89,9 @@ export default function Footer() {
                                 <a href="https://www.instagram.com/vcckenya/" target="_blank" rel="noopener noreferrer">
                                     <Instagram fontSize='large' />
                                 </a>
-                                <Twitter fontSize='large' />
+                                <a href="https://twitter.com/vcckenya" target="_blank" rel="noopener noreferrer">
+                                    <Twitter fontSize='large' />
+                                </a>
                             </Grid>
                         </Grid>
                     </Container>
