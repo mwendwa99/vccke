@@ -15,6 +15,7 @@ import ScrollToTop from './components/config/ScrollToTop';
 import Volunteer from './components/Volunteer';
 import Support from './components/Support';
 import NotFound from './components/NotFound';
+import Map from './map/Map';
 
 function App() {
   return (

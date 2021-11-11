@@ -72,7 +72,7 @@ const ContactForm = ({ nameLabel, emailLabel, messageLabel }) => {
                                 label={messageLabel}
                                 multiline
                                 rows={4}
-                                defaultValue={`Enter ${messageLabel} here...`}
+                                placeholder={`Enter ${messageLabel} here...`}
                                 variant="filled"
                             />
                         </Grid>

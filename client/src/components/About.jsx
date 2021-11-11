@@ -3,6 +3,7 @@ import { makeStyles } from '@mui/styles';
 import { Box } from '@mui/system'
 import React from 'react';
 import { assets } from '../assets';
+import Map from '../map/Map';
 
 import { colors } from './config/colors';
 import { TitlebarImageList } from './config/QuiltedImageList';
@@ -41,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'center',
         alignItems: 'center',
         padding: theme.spacing(2),
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('md')]: {
             flexDirection: 'column',
             '& img': {
                 height: '100%',
@@ -52,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
     },
     titleBar: {
         height: '30vh',
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('md')]: {
             height: '15vh'
         }
     }
@@ -152,6 +153,7 @@ const About = () => {
                     <div style={{ margin: '1rem' }}>
                         <TitlebarImageList />
                     </div>
+                    <Map />
                 </Container>
                 <Container maxWidth='xxl' className={classes.teamContainer}>
                     <Typography variant='h1' color='primary' align='center'>
@@ -161,7 +163,7 @@ const About = () => {
                         <Grid item sm={12} className={classes.teamGridItem}>
                             <Typography variant='body1' align='center'>
                                 <img src={assets.team} height='100%' width='100%' alt="our team" />
-                                From left: Ms. Rosalia Makau, Ms. Nancy Wanja, Ms. Winnie Munene, Dr. Rittah Njeru, Dr. Fredrcik Kamunde.
+                                From left: Ms. Rosalia Makau, Ms. Nancy Wanja, Ms. Winnie Munene, Dr. Rittah Njeru, Dr. Fredrick Kamunde.
                             </Typography>
                         </Grid>
                     </Grid>

@@ -33,6 +33,10 @@ const useStyles = makeStyles((theme) => ({
         padding: '0.1rem',
         textDecoration: 'none',
         color: '#000',
+        '& a': {
+            textDecoration: 'none',
+            color: '#000',
+        }
     }
 }))
 

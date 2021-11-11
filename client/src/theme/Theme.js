@@ -33,17 +33,17 @@ export const AppTheme = createTheme({
         fontWeightMedium: 500,
         fontWeightBold: 600,
         h1: {
-            fontWeight: 600,
+            fontWeight: 500,
             fontSize: '3rem',
             lineHeight: 1.5
         },
         h2: {
             fontSize: '1.5rem',
-            fontWeight: 500,
+            fontWeight: 400,
         },
         body1: {
             fontSize: '1.5rem',
-            fontWeight: 500,
+            fontWeight: 300,
         },
     }
 });

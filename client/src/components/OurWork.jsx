@@ -108,8 +108,17 @@ const OurWork = () => {
                 <VizSensor onChange={(isVisible) => setActive(isVisible)}>
                     <Fade in={true} timeout={100} unmountOnExit={active}>
                         <Container maxWidth='xl' style={{ padding: '1rem' }} >
-                            <Typography variant='h1' align='center' color='primary'>Our ongoing programme at Kariadudu, Nairobi</Typography>
+                            <Typography variant='h3' align='center' color='primary'>
+                                Donation programme held at Kariadudu, Nairobi
+                            </Typography>
                             <QuiltedImageList />
+                            <Typography variant='bodyy1' align='center' color='primary'>
+                                As the world grapples with an unprecedented global health emergency and slowly
+                                recovering, a small group of girls from Kariadudu, one of the informal settlement in
+                                Kenya, gather around to discuss another emergency – the lack of sanitary pads. With
+                                the help of CHVs, we identified about 30 households with girls that are in dire need of
+                                menstrual kits.
+                            </Typography>
                         </Container>
                     </Fade>
                 </VizSensor>

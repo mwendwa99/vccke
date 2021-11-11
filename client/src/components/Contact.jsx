@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     },
     titleBar: {
         height: '30vh',
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('md')]: {
             height: '15vh'
         }
     }
