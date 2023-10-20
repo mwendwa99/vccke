@@ -1,28 +1,35 @@
 {
   "name": "vcck",
-  "version": "1.0.0",
-  "description": "vccke website",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mwendwa99/vccke.git"
-  },
-  "author": "Brian Mwendwa <brianmwendwa.mu@gmail.com>",
-  "license": "MIT",
-  "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^10.0.0",
-    "express": "^4.17.1",
-    "nodemailer": "^6.7.0",
-    "nodemon": "^2.0.14"
-  },
-  "bugs": {
-    "url": "https://github.com/mwendwa99/vccke/issues"
-  },
-  "homepage": "https://github.com/mwendwa99/vccke#readme",
-  "devDependencies": {},
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
   },
-  "keywords": []
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.14",
+    "@mui/material": "^5.14.14",
+    "@react-google-maps/api": "^2.19.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-parallax": "^3.5.1",
+    "react-phone-number-input": "^3.3.7",
+    "react-router-dom": "^6.17.0",
+    "react-visibility-sensor": "^5.1.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^4.0.3",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "vite": "^4.4.5"
+  }
 }
