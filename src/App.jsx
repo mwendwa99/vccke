@@ -1,9 +1,11 @@
-import "./App.css";
+import HomePage from "Pages/HomePage";
+import Navbar from "@Navbar";
 
 function App() {
   return (
     <>
-      <h1>VCCK</h1>
+      <Navbar />
+      <HomePage />
     </>
   );
 }
