@@ -2,6 +2,7 @@ import { Box, Typography, Grid, Container } from "@mui/material";
 
 import Button from "@Button";
 import Card from "@Card";
+import ImageList from "@ImageList";
 import Background from "Images/world.svg";
 import vcck1 from "Images/vcck1.png";
 import vcck2 from "Images/vcck2.png";
@@ -49,26 +50,18 @@ const HomePage = () => {
             />
           </Grid>
           <Grid item sm={6} md={6}>
-            <Grid
-              container
-              spacing={1}
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignContent: "center",
-              }}
-            >
-              <Grid item xs={6} sm={3} md={6}>
+            <Grid container spacing={1}>
+              <Grid item xs={6} sm={6} md={8}>
                 <img src={vcck1} alt="Image 1" />
               </Grid>
-              <Grid item xs={6} sm={3} md={6}>
+              <Grid item xs={6} sm={6} md={4}>
                 <img src={vcck2} alt="Image 2" />
               </Grid>
-              <Grid item xs={6} sm={3} md={6}>
-                <img src={vcck3} alt="Image 3" />
+              <Grid item xs={6} sm={6} md={4}>
+                <img src={vcck4} alt="Image 3" />
               </Grid>
-              <Grid item xs={6} sm={3} md={6}>
-                <img src={vcck4} alt="Image 4" />
+              <Grid item xs={6} sm={6} md={8}>
+                <img src={vcck3} alt="Image 4" />
               </Grid>
             </Grid>
           </Grid>
@@ -101,11 +94,8 @@ const HomePage = () => {
             sm={6}
             md={6}
             sx={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignContent: "center",
               textAlign: { xs: "center", sm: "left" },
+              flexDirection: "column",
             }}
           >
             <Box>
@@ -144,7 +134,7 @@ const HomePage = () => {
         </Grid>
         {/* Goals */}
         <Grid container spacing={3} sx={{ py: 3 }}>
-          <Grid item xs={12}>
+          <Grid item xs={12} sx={{ flexDirection: "column" }}>
             <Typography align="center" gutterBottom variant="h2">
               Our Goals
             </Typography>
@@ -154,19 +144,29 @@ const HomePage = () => {
               the core values we hold dear, and they are central to our mission:
             </Typography>
           </Grid>
-          <Grid
-            item
-            xs={12}
-            sx={{
-              display: "flex",
-              flexDirection: { xs: "column", sm: "column", md: "row" },
-              justifyContent: "center",
-              alignContent: "center",
-            }}
-          >
-            <Card />
-            <Card />
-            <Card />
+          <Grid item xs={12}>
+            <Grid container spacing={2}>
+              <Grid item xs={12} sm={6} md={4}>
+                <Card />
+              </Grid>
+              <Grid item xs={12} sm={6} md={4}>
+                <Card />
+              </Grid>
+              <Grid item xs={12} sm={6} md={4}>
+                <Card />
+              </Grid>
+            </Grid>
+          </Grid>
+        </Grid>
+        {/* Activity */}
+        <Grid container spacing={3} sx={{ py: 3 }}>
+          <Grid item xs={12}>
+            <Typography align="center" gutterBottom variant="h2">
+              Gallery
+            </Typography>
+          </Grid>
+          <Grid item xs={12}>
+            <ImageList />
           </Grid>
         </Grid>
       </Container>

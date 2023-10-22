@@ -118,6 +118,27 @@ const theme = createTheme({
         },
       },
     },
+    MuiGrid: {
+      styleOverrides: {
+        root: {
+          display: "flex",
+          justifyContent: "center",
+          alignContent: "center",
+        },
+      },
+    },
+    MuiLink: {
+      styleOverrides: {
+        root: {
+          color: "inherit",
+          textDecoration: "none",
+          padding: 2,
+          "&:hover": {
+            color: "#283847",
+          },
+        },
+      },
+    },
   },
 });
 

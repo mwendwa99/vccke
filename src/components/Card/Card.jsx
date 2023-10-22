@@ -1,3 +1,5 @@
+import { useNavigate } from "react-router-dom";
+
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -10,6 +12,8 @@ import dataIcon from "Icons/data.svg";
 import arrowRight from "Icons/arrow-circle-right.svg";
 
 export default function BasicCard() {
+  const navigate = useNavigate();
+
   return (
     <Card sx={{ width: 275, m: 2 }} elevation={0}>
       <CardContent>
@@ -34,7 +38,10 @@ export default function BasicCard() {
           future.
         </Typography>
       </CardContent>
-      <CardActions style={{ justifyContent: "flex-end" }}>
+      <CardActions
+        onClick={() => navigate("/ss")}
+        style={{ justifyContent: "flex-end" }}
+      >
         <Button
           variant="button"
           type="icon"

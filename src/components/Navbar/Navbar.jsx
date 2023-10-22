@@ -10,6 +10,8 @@ import Container from "@mui/material/Container";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 
+import { Link, useNavigate } from "react-router-dom";
+
 import Button from "@Button";
 import logo from "Images/logo-lg.svg";
 
@@ -19,6 +21,7 @@ const settings = ["Profile", "Account", "Dashboard", "Logout"];
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const navigate = useNavigate();
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -30,6 +33,10 @@ function Navbar() {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
+  const handleNavigate = (page) => {
+    setAnchorElNav(null);
+    navigate("/" + page.toLowerCase().replace(/\s/g, "-"));
+  };
 
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
@@ -40,7 +47,9 @@ function Navbar() {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Box sx={{ flex: 1 }}>
-            <img src={logo} alt="vcck-logo" />
+            <Link to="/">
+              <img src={logo} alt="vcck-logo" />
+            </Link>
           </Box>
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -50,6 +59,7 @@ function Navbar() {
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
               color="inherit"
+              sx={{ backgroundColor: "#fff" }}
             >
               <MenuIcon sx={{ fill: "#283847" }} />
             </IconButton>
@@ -73,7 +83,11 @@ function Navbar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Typography textAlign="center">
+                    <Link to={`/${page.toLowerCase().replace(/\s/g, "-")}`}>
+                      {page}
+                    </Link>
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -85,7 +99,7 @@ function Navbar() {
               <Button
                 type="text"
                 key={page}
-                onClick={handleCloseNavMenu}
+                onClick={() => handleNavigate(page)}
                 sx={{ display: "block" }}
                 variant="text"
                 text={page}

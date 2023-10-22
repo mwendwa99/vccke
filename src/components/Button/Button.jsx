@@ -6,7 +6,7 @@ export default function CustomButton(props) {
   switch (props.type) {
     case "text":
       return (
-        <Button variant={props.variant} sx={props.sx}>
+        <Button onClick={props.onClick} variant={props.variant} sx={props.sx}>
           {props.text}
         </Button>
       );
@@ -29,4 +29,5 @@ CustomButton.propTypes = {
   type: PropTypes.string.isRequired,
   label: PropTypes.string,
   icon: PropTypes.string,
+  onClick: PropTypes.func,
 };

@@ -10,6 +10,8 @@ export default defineConfig({
       "@Navbar": "/src/components/Navbar/Navbar.jsx",
       "@Button": "/src/components/Button/Button.jsx",
       "@Card": "/src/components/Card/Card.jsx",
+      "@Footer": "/src/components/Footer/Footer.jsx",
+      "@ImageList": "/src/components/ImageList/ImageList.jsx",
       Pages: "/src/pages",
       Utils: "/src/utils",
       Images: "/src/assets/images",
