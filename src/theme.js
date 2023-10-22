@@ -71,6 +71,53 @@ const theme = createTheme({
         },
       },
     },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          background: "#F3F4F6",
+          borderRadius: 20,
+          width: "100%",
+          padding: "5px",
+          "&:hover": {
+            backgroundColor: "#CD4D88",
+            cursor: "pointer",
+            transition: "all 0.3s ease-in-out",
+          },
+          "&:hover img": {
+            backgroundColor: "#FBBF24",
+          },
+        },
+      },
+    },
+    MuiCardContent: {
+      styleOverrides: {
+        root: {
+          display: "flex",
+          flexDirection: "column",
+          "&:hover img": {
+            backgroundColor: "#fff",
+          },
+        },
+      },
+    },
+    MuiCardHeader: {
+      styleOverrides: {
+        root: {
+          paddingLeft: "0px",
+          paddingRight: "0px",
+        },
+      },
+    },
+    MuiIconButton: {
+      styleOverrides: {
+        root: {
+          padding: "2px",
+          backgroundColor: "#CD4D88",
+          borderRadius: "10px",
+          alignSelf: "flex-end",
+        },
+      },
+    },
   },
 });
 

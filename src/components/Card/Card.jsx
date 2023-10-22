@@ -1,40 +1,46 @@
-import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
-import Button from "@mui/material/Button";
+import CardHeader from "@mui/material/CardHeader";
+// import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
-const bull = (
-  <Box
-    component="span"
-    sx={{ display: "inline-block", mx: "2px", transform: "scale(0.8)" }}
-  >
-    •
-  </Box>
-);
+import Button from "@Button";
+import dataIcon from "Icons/data.svg";
+import arrowRight from "Icons/arrow-circle-right.svg";
 
 export default function BasicCard() {
   return (
-    <Card sx={{ minWidth: 275, m: 2 }}>
+    <Card sx={{ width: 275, m: 2 }} elevation={0}>
       <CardContent>
+        <img
+          style={{
+            backgroundColor: "#0284C7",
+            padding: "5px",
+            borderRadius: "10px",
+            display: "block",
+            float: "left",
+          }}
+          src={dataIcon}
+          height="35px"
+          width="35px"
+          alt="data-icon"
+        />
+        <CardHeader title=" Fighting Poverty" />
+
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-          Word of the Day
-        </Typography>
-        <Typography variant="h5" component="div">
-          be{bull}nev{bull}o{bull}lent
-        </Typography>
-        <Typography sx={{ mb: 1.5 }} color="text.secondary">
-          adjective
-        </Typography>
-        <Typography variant="body2">
-          well meaning and kindly.
-          <br />
-          {'"a benevolent smile"'}
+          Through providing essential aid to those in need, we aim to empower
+          individuals and families, offering them a pathway to a brighter
+          future.
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
+      <CardActions style={{ justifyContent: "flex-end" }}>
+        <Button
+          variant="button"
+          type="icon"
+          icon={arrowRight}
+          label="arrow-circle-right"
+        />
       </CardActions>
     </Card>
   );

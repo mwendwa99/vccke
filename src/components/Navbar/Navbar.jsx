@@ -83,6 +83,7 @@ function Navbar() {
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
               <Button
+                type="text"
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ display: "block" }}
@@ -94,6 +95,7 @@ function Navbar() {
 
           <Box sx={{ flexGrow: 0 }}>
             <Button
+              type="text"
               onClick={handleOpenUserMenu}
               variant="contained"
               text="Donate"

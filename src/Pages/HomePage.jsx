@@ -20,7 +20,7 @@ const HomePage = () => {
   return (
     <Box sx={backgroundStyle}>
       <Container maxWidth="lg">
-        <Grid container spacing={3} sx={{ p: 2 }}>
+        <Grid container spacing={3} sx={{ py: 3 }}>
           <Grid
             item
             sm={6}
@@ -42,6 +42,7 @@ const HomePage = () => {
               </Typography>
             </Box>
             <Button
+              type="text"
               sx={{ width: "100%", my: 10 }}
               variant="contained"
               text="Donate"
@@ -73,7 +74,7 @@ const HomePage = () => {
           </Grid>
         </Grid>
         {/* who we are */}
-        <Grid container spacing={3}>
+        <Grid container spacing={3} sx={{ py: 3 }}>
           <Grid
             item
             sm={6}
@@ -89,7 +90,6 @@ const HomePage = () => {
                 height: "100%",
                 width: "100%",
                 objectFit: "cover",
-                backgroundColor: "red",
               }}
               src={vcck5}
               alt="children"
@@ -109,7 +109,7 @@ const HomePage = () => {
             }}
           >
             <Box>
-              <Typography gutterBottom graphy variant="h2">
+              <Typography gutterBottom variant="h2">
                 Who We Are?
               </Typography>
               <Typography gutterBottom variant="body1">
@@ -143,7 +143,7 @@ const HomePage = () => {
           </Grid>
         </Grid>
         {/* Goals */}
-        <Grid container spacing={3}>
+        <Grid container spacing={3} sx={{ py: 3 }}>
           <Grid item xs={12}>
             <Typography align="center" gutterBottom variant="h2">
               Our Goals
