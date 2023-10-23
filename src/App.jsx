@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 
 import HomePage from "Pages/HomePage";
+import GetInvolvedPage from "Pages/GetInvolvedPage";
 import NotFoundPage from "Pages/NotFoundPage";
 
 import Navbar from "@Navbar";
@@ -14,6 +15,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/get-involved" element={<GetInvolvedPage />} />
         {/* not found */}
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

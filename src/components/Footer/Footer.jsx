@@ -1,4 +1,5 @@
-import { Box, Typography, Grid, Link } from "@mui/material";
+import { Box, Typography, Grid } from "@mui/material";
+import { Link } from "react-router-dom";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -38,19 +39,19 @@ const Footer = () => {
           <Button type="text" text="Donate" variant="contained" />
         </Grid>
         <Grid item xs={12}>
-          <Link href="/">Home | </Link>
-          <Link href="/about">About Us | </Link>
-          <Link href="/services">Events | </Link>
-          <Link href="/contact">Get Involved</Link>
+          <Link to="/">Home | </Link>
+          <Link to="/about">About Us | </Link>
+          <Link to="/services">Events | </Link>
+          <Link to="/contact">Get Involved</Link>
         </Grid>
         <Grid item xs={6} sm={3}>
-          <Link href="https://facebook.com" target="_blank">
+          <Link to="https://facebook.com" target="_blank">
             <FacebookIcon />
           </Link>
-          <Link href="https://twitter.com" target="_blank">
+          <Link to="https://twitter.com" target="_blank">
             <TwitterIcon />
           </Link>
-          <Link href="https://instagram.com" target="_blank">
+          <Link to="https://instagram.com" target="_blank">
             <InstagramIcon />
           </Link>
         </Grid>

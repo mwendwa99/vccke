@@ -1,14 +1,14 @@
-import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
 
 export default function TitlebarBelowMasonryImageList() {
   return (
-    <Box
+    <Container
+      maxWidth="lg"
       sx={{
-        width: "auto",
-        height: 450,
+        height: 800,
         overflowY: "scroll",
         scrollbarWidth: "thin", // For Firefox
         scrollbarColor: "#ccc #ccc", // For Firefox
@@ -28,7 +28,7 @@ export default function TitlebarBelowMasonryImageList() {
           </ImageListItem>
         ))}
       </ImageList>
-    </Box>
+    </Container>
   );
 }
 

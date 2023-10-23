@@ -71,6 +71,17 @@ const theme = createTheme({
         },
       },
     },
+    MuiPaper: {
+      styleOverrides: {
+        root: {
+          background: "#F3F4F6",
+          borderRadius: 10,
+          width: "100%",
+          padding: "5px",
+          border: "1px solid #EAEAEA",
+        },
+      },
+    },
     MuiCard: {
       styleOverrides: {
         root: {
