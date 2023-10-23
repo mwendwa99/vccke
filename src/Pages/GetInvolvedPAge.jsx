@@ -26,7 +26,7 @@ const ContactForm = () => {
   return (
     <Container maxWidth="md" sx={{ minHeight: "50vh", mt: 4 }}>
       <Paper elevation={0} sx={{ p: 2 }}>
-        <Typography variant="h4" gutterBottom>
+        <Typography align="center" variant="h4" gutterBottom>
           Contact Us
         </Typography>
         <form onSubmit={handleSubmit}>

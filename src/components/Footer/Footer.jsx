@@ -41,8 +41,8 @@ const Footer = () => {
         <Grid item xs={12}>
           <Link to="/">Home | </Link>
           <Link to="/about">About Us | </Link>
-          <Link to="/services">Events | </Link>
-          <Link to="/contact">Get Involved</Link>
+          <Link to="/events">Events | </Link>
+          <Link to="/get-involved">Get Involved</Link>
         </Grid>
         <Grid item xs={6} sm={3}>
           <Link to="https://facebook.com" target="_blank">

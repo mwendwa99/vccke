@@ -43,7 +43,7 @@ function Navbar() {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" sx={{ borderRadius: 0 }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Box sx={{ flex: 1 }}>
