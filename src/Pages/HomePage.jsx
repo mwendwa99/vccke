@@ -3,12 +3,39 @@ import { Box, Typography, Grid, Container } from "@mui/material";
 import Button from "@Button";
 import Card from "@Card";
 import ImageList from "@ImageList";
+
+import dataIcon from "Icons/data.svg";
+import arrowRight from "Icons/arrow-circle-right.svg";
 import Background from "Images/world.svg";
 import vcck1 from "Images/vcck1.png";
 import vcck2 from "Images/vcck2.png";
 import vcck3 from "Images/vcck3.png";
 import vcck4 from "Images/vcck4.png";
 import vcck5 from "Images/vcck5.png";
+
+const cardData = [
+  {
+    title: "Fighting Poverty",
+    description:
+      "Through providing essential aid to those in need, we aim to empower individuals and families, offering them a pathway to a brighter future.",
+    icon: dataIcon,
+    iconButton: arrowRight,
+  },
+  {
+    title: "Promoting Education",
+    description:
+      "We believe that every child deserves the opportunity to learn and grow, regardless of their background.",
+    icon: dataIcon,
+    iconButton: arrowRight,
+  },
+  {
+    title: "Protecting the Vulnerable",
+    description:
+      "We are dedicated to protecting the vulnerable in our community, including children, the elderly, and those with disabilities.",
+    icon: dataIcon,
+    iconButton: arrowRight,
+  },
+];
 
 const HomePage = () => {
   const backgroundStyle = {
@@ -145,16 +172,18 @@ const HomePage = () => {
             </Typography>
           </Grid>
           <Grid item xs={12}>
-            <Grid container spacing={2}>
-              <Grid item xs={12} sm={6} md={4}>
-                <Card />
-              </Grid>
-              <Grid item xs={12} sm={6} md={4}>
-                <Card />
-              </Grid>
-              <Grid item xs={12} sm={6} md={4}>
-                <Card />
-              </Grid>
+            <Grid container spacing={0}>
+              {cardData.map((card, index) => (
+                <Grid item xs={12} sm={6} md={4} key={index}>
+                  <Card
+                    type="basic"
+                    title={card.title}
+                    description={card.description}
+                    icon={card.icon}
+                    iconButton={card.iconButton}
+                  />
+                </Grid>
+              ))}
             </Grid>
           </Grid>
         </Grid>
