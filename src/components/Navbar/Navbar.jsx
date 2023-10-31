@@ -15,7 +15,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Button from "@Button";
 import logo from "Images/logo-lg.svg";
 
-const pages = ["About Us", "Events and News", "Get Involved"];
+const pages = ["About Us", "Events", "Get Involved"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function Navbar() {

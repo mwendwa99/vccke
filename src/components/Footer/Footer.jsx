@@ -40,7 +40,7 @@ const Footer = () => {
         </Grid>
         <Grid item xs={12}>
           <Link to="/">Home | </Link>
-          <Link to="/about">About Us | </Link>
+          <Link to="/about-us">About Us | </Link>
           <Link to="/events">Events | </Link>
           <Link to="/get-involved">Get Involved</Link>
         </Grid>
